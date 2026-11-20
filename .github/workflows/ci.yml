@@ -38,7 +38,7 @@ jobs:
       - name: Vérifier le port Render et les routes dans le conteneur
         run: |
           docker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci
-          curl --fail --silent --show-error --retry 20 --retry-connrefused --retry-delay 1 http://127.0.0.1:8000/health
+          curl --fail --silent --show-error --retry 20 --retry-all-errors --retry-delay 1 --retry-max-time 60 --connect-timeout 2 --max-time 5 http://127.0.0.1:8000/health
           python scripts/verifier_service.py http://127.0.0.1:8000
       - name: Collecter les journaux et supprimer le conteneur
         if: always()
