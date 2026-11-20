@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gestion-stages-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+    buildFilter:
+      ignoredPaths:
+        - README.md
+        - docs/**
+        - preuves/**

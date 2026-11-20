@@ -1,0 +1,14 @@
+-r requirements.txt
+
+# Tests, couverture et vérification du style.
+certifi==2026.10.19
+coverage[toml]==7.13.5
+httpcore==1.0.9
+httpx==0.28.1
+iniconfig==2.3.0
+packaging==26.3
+pluggy==1.6.0
+pygments==2.21.0
+pytest==9.0.2
+pytest-cov==7.0.0
+ruff==0.14.7

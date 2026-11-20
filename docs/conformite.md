@@ -1,0 +1,29 @@
+# Matrice de conformité
+
+Les pages renvoient aux numéros de page PDF de l’énoncé (2 pages) et du support d’Emna Trigui (41 pages). Les références au cours justifient les choix techniques. Les exigences de remise proviennent de l’énoncé.
+
+| ID | Exigence | Source | Priorité | Composant et solution | Critère de vérification | Statut au 16 novembre 2026 |
+|---|---|---|---|---|---|---|
+| E01 | Gérer des stages avec les six champs demandés et SQLite | Énoncé p. 1, §2–3.1 | Obligatoire | `app/schemas.py`, `app/database.py` | Créer un stage, fermer puis relancer le service sur le même fichier et relire le stage | **Conforme et vérifié.** Test de persistance sur un fichier temporaire. |
+| E02 | Fournir les opérations REST GET, POST, PUT et DELETE | Énoncé p. 1, §2–3.1 · Cours p. 23–26 | Obligatoire | `app/main.py`, `/stages`, `/stages/{id}` | Vérifier les méthodes, les corps, les statuts HTTP et la liste vide | **Conforme et vérifié.** TestClient et parcours HTTP sur Uvicorn. |
+| E03 | Tester les routes avec Swagger ou Postman, y compris l’absence de ressource | Énoncé p. 1–2, §3.2 · Cours p. 27 | Obligatoire | `/docs`, `/openapi.json`, `docs/preuves.md` | Rejouer création, liste, remplacement, suppression et réponse `404` depuis l’un des deux outils | **Implémenté mais non vérifié** dans l’interface. Les URLs de documentation et le CRUD ont répondu par HTTP local. |
+| E04 | Fournir le Dockerfile, construire l’image et démarrer le conteneur | Énoncé p. 2, §3.3 et §4 · Cours p. 32–33 | Obligatoire | `Dockerfile`, `.dockerignore` | Obtenir une construction réussie et un conteneur en fonctionnement | **Implémenté mais non vérifié.** Build à lancer avec Docker Engine. |
+| E05 | Vérifier l’API et ouvrir Swagger dans le conteneur | Énoncé p. 2, §3.3 | Obligatoire | `scripts/verifier_service.py`, `docs/deploiement.md` | Rejouer le CRUD via le port publié et afficher les routes dans Swagger | **À réaliser.** La commande Uvicorn a été testée comme processus local. |
+| E06 | Déposer le code source sur GitHub | Énoncé p. 2, §3.4 et §4 | Obligatoire | Dépôt GitHub à publier | Accéder au dépôt et au commit évalué depuis un compte autorisé | **Bloqué par une action externe.** Publier depuis le compte du groupe. |
+| E07 | Déployer un Web Service Docker sur Render Free et tester l’URL publique | Énoncé p. 2, §3.4 et §4 · Cours p. 4, 7, 12–13 | Obligatoire | `render.yaml`, `docs/deploiement.md` | Obtenir l’état `Live`, tester les routes via HTTPS et joindre l’URL réelle | **Bloqué par une action externe.** Connecter le dépôt et déployer depuis Render. |
+| E08 | Fournir une courte documentation des endpoints | Énoncé p. 2, §4 · Cours p. 24–27 | Obligatoire | `README.md`, `/docs` | Comparer champs, méthodes et codes documentés au contrat OpenAPI | **Conforme et vérifié.** Exemples JSON et contrat concordants. |
+| E09 | Joindre des captures authentiques du fonctionnement et du déploiement | Énoncé p. 2, §4 | Obligatoire | `docs/preuves.md`, `preuves/` | Voir les requêtes et réponses locales, le conteneur et le service public | **À réaliser.** Journaux locaux joints et checklist des captures préparée. |
+| E10 | Utiliser des données fictives et tenir compte du stockage éphémère | Énoncé p. 2, remarque finale · Cours p. 13 et 29 | Obligatoire | Exemples Swagger, tests et guide Render | Vérifier les données d’exemple, le plan déclaré et la limitation documentée | **Conforme et vérifié** sur les livrables locaux. Le plan effectivement déployé relève d’E07. |
+| Q01 | Mesurer au moins 80 % de couverture applicative | Cahier des charges du groupe, §8 | Exigence du groupe | `tests/`, `pyproject.toml` | Mesurer la couverture sur `app` et configurer un échec sous 80 % | **Conforme et vérifié** pour les lignes locales, 179 sur 179. Mesure des branches à exécuter en CI. |
+| Q02 | Automatiser Ruff, les tests et la validation Docker | Cahier des charges du groupe, §11 · Cours p. 39–40 | Amélioration retenue | `.github/workflows/ci.yml` | Consulter une exécution réussie dans GitHub Actions | **Implémenté mais non vérifié** sur GitHub Actions. |
+| Q03 | Préparer une démonstration et une revue croisée | Cahier des charges du groupe, §15–16 | Amélioration retenue | `docs/demonstration.md` | Disposer d’un scénario de 5 à 7 minutes et d’une répartition de la revue | **Facultatif.** Scénario de 6 min 15 et revue proposés. |
+
+## Périmètre et choix
+
+- **Socle obligatoire.** Une API REST déployable avec un fichier SQLite, une vérification Swagger ou Postman, une image Docker, un dépôt GitHub, un service Render Free, une documentation des routes et des preuves.
+- **Améliorations retenues.** Validation Pydantic, tests isolés, objectif de couverture, `Location` à la création, sonde `/health`, contrôle HTTP sur un serveur en fonctionnement, GitHub Actions et guide de démonstration.
+- **Hors périmètre.** Kubernetes, éclatement en microservices, passerelle, bus de messages et gestion d’identités. Le cours présente ces outils dans des architectures plus larges (p. 18–22, 28–30 et 34–38). Le domaine métier couvre ici une seule ressource avec un cycle de déploiement unique.
+
+Les routes et les réponses HTTP vivent dans `app/main.py`. Pydantic rassemble les règles de saisie dans `app/schemas.py`. Le module `app/database.py` assure la création du fichier et les transactions SQLite. Cette séparation correspond à trois responsabilités dans un même service, sur une seule instance Uvicorn.
+
+**Composition du groupe.** Le groupe de cinq est confirmé pour ce projet. Les cinq membres figurent dans le README.
