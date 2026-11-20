@@ -178,7 +178,10 @@ function navigate(view, focus = false) {
   document.querySelectorAll("[data-view]").forEach((link) => { const active = link.dataset.view === view; link.classList.toggle("active", active); if (active) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current"); });
   if (location.hash !== `#${view}`) history.replaceState(null, "", `#${view}`);
   closeNavigation();
-  if (focus) $("#main").focus({ preventScroll: true });
+  if (focus) {
+    window.scrollTo({ top: 0, behavior: "instant" });
+    $("#main").focus({ preventScroll: true });
+  }
 }
 
 function resetFilters() {
