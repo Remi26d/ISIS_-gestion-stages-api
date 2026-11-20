@@ -1,0 +1,32 @@
+{
+  "verification_date": "2026-11-20",
+  "service": {
+    "id": "srv-dc000o142hec738a2lhg",
+    "name": "isis-gestion-stages-api",
+    "url": "https://isis-gestion-stages-api.onrender.com",
+    "dashboard_url": "https://dashboard.render.com/web/srv-dc000o142hec738a2lhg",
+    "repo": "https://github.com/Remi26d/ISIS_-gestion-stages-api",
+    "branch": "main",
+    "runtime": "docker",
+    "plan": "free",
+    "region": "frankfurt",
+    "auto_deploy": "yes",
+    "auto_deploy_trigger": "commit",
+    "health_check_path": "",
+    "health_check_mode": "TCP par défaut ; /health testé séparément par HTTP"
+  },
+  "deployment": {
+    "commit": {
+      "createdAt": "2026-11-20T08:06:14Z",
+      "id": "ed8258ebeff0e89967831a40cf612dff315567c0",
+      "message": "Documenter les validations Docker et GitHub Actions réussies"
+    },
+    "createdAt": "2026-11-20T08:10:11.086684Z",
+    "finishedAt": "2026-11-20T08:11:00.856878Z",
+    "id": "dep-dc000op42hec738a2n10",
+    "startedAt": "2026-11-20T08:10:11.082289Z",
+    "status": "live",
+    "trigger": "manual",
+    "updatedAt": "2026-11-20T08:11:33.548596Z"
+  }
+}

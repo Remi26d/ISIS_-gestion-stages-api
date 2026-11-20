@@ -120,12 +120,14 @@ Ouvrir [Swagger dans le conteneur](http://127.0.0.1:8000/docs), puis suivre le [
 
 **Dépôt GitHub** · [https://github.com/Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api)
 
-**URL publique Render** · adresse à renseigner après validation du service en HTTPS.
+**URL publique Render** · [Ouvrir Swagger et tester l’API](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde de disponibilité](https://isis-gestion-stages-api.onrender.com/health).
+
+Le service `isis-gestion-stages-api` est déployé en Docker sur le plan **Free**, en région **Francfort**. Le 20 novembre 2026, Render a confirmé l’état `live` et le parcours CRUD public a réussi. Les [captures Swagger et les journaux](docs/preuves.md) sont joints. Le commit applicatif déployé est `ed8258ebeff0e89967831a40cf612dff315567c0` ; les commits suivants consacrés aux preuves peuvent porter `[skip render]` pour conserver ce déploiement.
 
 Sur Render Free, le fichier SQLite est recréé au besoin. Les modifications locales sont perdues au redéploiement, au redémarrage ou à la mise en veille. Les endpoints sont publics et destinés aux stages fictifs. Un usage réel demanderait une authentification, des autorisations, une journalisation adaptée et un stockage durable. [Documentation Render Free](https://render.com/docs/free)
 
 ## Dossier de remise
 
 - [Matrice de conformité](docs/conformite.md)
-- [Captures et preuves à collecter](docs/preuves.md)
+- [Captures réalisées et preuves à compléter](docs/preuves.md)
 - [Scénario de démonstration et organisation du groupe](docs/demonstration.md)

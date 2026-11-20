@@ -1,6 +1,16 @@
 # Docker et déploiement Render
 
-Pour enchaîner la validation Docker, la publication avec GitHub Desktop et le déploiement via Blueprint, suivre le [guide Windows](guide-windows.md).
+## Service déjà déployé le 20 novembre 2026
+
+[Swagger public](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde HTTP](https://isis-gestion-stages-api.onrender.com/health) · [Tableau de bord du service](https://dashboard.render.com/web/srv-dc000o142hec738a2lhg).
+
+Le service `isis-gestion-stages-api` utilise le dépôt `Remi26d/ISIS_-gestion-stages-api`, la branche `main`, le runtime Docker, le plan **Free** et la région **Frankfurt**. Le déploiement `dep-dc000op42hec738a2n10` du commit `ed8258ebeff0e89967831a40cf612dff315567c0` est passé à `live` le 20 novembre 2026 à **09:11, heure de Paris**. Le contrôle HTTP et le parcours interactif Swagger ont réussi. Le [reçu de déploiement](../preuves/render/00-deploiement.json) et les [journaux](../preuves/render/07-journaux-render.txt) conservent les paramètres et les événements constatés.
+
+Ce service a été créé directement dans Render. Son déploiement automatique se déclenche **à chaque commit**, et sa vérification de démarrage est le contrôle **TCP par défaut**. La route `/health` a été vérifiée séparément par HTTP. Le fichier `render.yaml` décrit une autre méthode de création avec Blueprint ; ses réglages `/health`, attente de la CI et filtres de fichiers ne sont pas appliqués automatiquement au service créé directement.
+
+Pour un commit qui modifie seulement le README, la documentation ou les preuves, commencer le message par `[skip render]`. GitHub Actions exécute toujours les contrôles, mais Render conserve l’image en cours. Un changement de code applicatif doit être déployé et revérifié. [Déclenchement et exclusion d’un déploiement](https://render.com/docs/deploys)
+
+Les étapes ci-dessous servent à reproduire l’installation. Le service existant n’a pas à être recréé. Pour les dernières captures sur le PC Windows, suivre le [guide Windows](guide-windows.md).
 
 ## 1. Exécuter le conteneur en local
 

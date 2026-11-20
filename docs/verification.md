@@ -1,6 +1,8 @@
 # Rapport de vérification
 
-**16 novembre 2026** · Python 3.12.14 · SQLite 3.53.1
+**Dernière mise à jour : 20 novembre 2026** · Python 3.12.14
+
+Le service [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) fonctionne sur Render Docker **Free**, en région Francfort. Le déploiement applicatif `ed8258ebeff0e89967831a40cf612dff315567c0` est `live`. Le contrôle HTTP complet et les opérations interactives dans Swagger ont réussi. Les résultats et captures sont détaillés plus bas.
 
 ## Résultats locaux
 
@@ -21,8 +23,8 @@ La commande de lancement du `Dockerfile` a également été exécutée comme pro
 
 | Contrôle | État | Vérification à réaliser |
 |---|---|---|
-| Swagger en navigateur ou Postman | `/docs` et `/openapi.json` répondent en HTTP `200` localement et dans le conteneur. | Exécuter le parcours interactif et conserver les captures. |
-| Déploiement Render et test public | Le dépôt et Actions sont accessibles. Render refuse la récupération du dépôt privé. | Autoriser le dépôt dans les accès GitHub de Render, déployer et tester l’adresse HTTPS réelle. |
+| Capture Swagger dans le conteneur local | Le journal Docker confirme `/docs`, `/openapi.json` et le CRUD en HTTP ; Swagger a aussi été testé dans le conteneur public Render. | Joindre la capture de Swagger ouvert sur `http://127.0.0.1:8000/docs` depuis le PC. |
+| Captures du terminal Docker et du tableau de bord Render | Les journaux Docker et Render sont joints ; les captures publiques sont réalisées. | Joindre les deux vues depuis les applications connectées du PC, selon le [guide Windows](guide-windows.md). |
 
 Pour reproduire rapidement les tests avec les dépendances d’exécution et HTTPX disponibles, utiliser `python -m unittest discover -s tests -v`. Pour la mesure de référence avant remise, exécuter `python -m pytest --cov=app --cov-report=term-missing --cov-report=html --cov-fail-under=80`.
 
@@ -44,7 +46,7 @@ Le groupe a fourni le journal produit sous Windows le 20 novembre 2026 à 08:28:
 
 Cette preuve valide désormais la construction et l’exécution Docker ainsi que le contrôle HTTP du conteneur. La vérification d’installation des dépendances d’exécution est également obtenue dans l’image vierge. Les lignes `System.Management.Automation.RemoteException` et les caractères altérés sont conservés tels qu’ils figurent dans le journal fourni.
 
-L’affichage interactif de Swagger reste à confirmer par les captures du navigateur. Le déploiement public Render reste à vérifier.
+L’affichage interactif de Swagger est désormais confirmé sur le service Render par les captures ci-dessous. La capture de l’interface Swagger locale du PC reste à joindre pour documenter ce contexte précis.
 
 ## Vérification pytest-cov et Ruff du 20 novembre 2026
 
@@ -69,4 +71,24 @@ Il valide l’installation des dépendances, Ruff, les 21 tests, la couverture d
 
 La première exécution avait échoué sur `curl` avec le code `56`, lors d’une connexion réinitialisée juste après le démarrage du conteneur. La commande attend désormais le démarrage avec des tentatives bornées, y compris après une réinitialisation de connexion. Le comportement a été reproduit en local et la correction a ensuite été confirmée par l’exécution réussie sur GitHub Actions.
 
-La création d’un service Docker Free a été tentée sur Render. La plateforme a refusé l’URL du dépôt comme `invalid or unfetchable`. La liste des services a été revérifiée après ce refus et reste vide. L’accès au dépôt privé doit être autorisé dans les paramètres Git Deployment Credentials de Render avant de poursuivre le déploiement.
+Une seconde exécution [44699902443](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44699902443) a également terminé avec `success` sur le commit `ed8258ebeff0e89967831a40cf612dff315567c0`, ensuite déployé sur Render.
+
+## Déploiement Render et tests publics du 20 novembre 2026
+
+Le refus initial `invalid or unfetchable` venait de l’accès au dépôt privé. Après autorisation du dépôt par le référent, la création a réussi. Le service `isis-gestion-stages-api` est passé à `live` le **20 novembre 2026 à 09:11, heure de Paris**.
+
+| Paramètre ou contrôle | Résultat constaté | Preuve |
+|---|---|---|
+| Service Render | Docker, **Free**, Frankfurt, branche `main` | [Reçu des paramètres et du déploiement](../preuves/render/00-deploiement.json) |
+| Image déployée | Commit `ed8258ebeff0e89967831a40cf612dff315567c0`, déploiement `dep-dc000op42hec738a2n10`, état `live` | [Reçu](../preuves/render/00-deploiement.json) |
+| Démarrage | Uvicorn écoute sur `0.0.0.0:10000`, démarrage terminé | [Journaux Render](../preuves/render/07-journaux-render.txt) |
+| Sonde, Swagger et contrat | `/health`, `/docs` et `/openapi.json` : HTTP `200` | [Contrôle HTTP public](../preuves/render/03-parcours-http.txt) |
+| CRUD public automatisé | `POST 201`, liste et détail `200`, `PUT 200`, relecture `200`, `DELETE 204`, puis `GET 404` | [Contrôle HTTP public](../preuves/render/03-parcours-http.txt) |
+| CRUD interactif Swagger | Création d’un stage fictif d’id `2`, lecture, modification de l’intitulé, suppression, puis lecture `404` | [Captures authentiques](preuves.md) |
+| Nettoyage de démonstration | `GET /stages` renvoie `200` et `[]` après les essais | [Capture de la liste](../preuves/render/captures/08-swagger-liste-200.jpg) |
+
+Le stage d’id `1` a été créé puis supprimé par le contrôle automatisé. Le stage d’id `2` a été créé puis supprimé dans Swagger. Les données sont fictives. La région Francfort a été retenue pour ce service européen, sur le plan gratuit. Aucun disque ni base externe payants n’ont été créés.
+
+Le service créé directement utilise le déclenchement automatique **sur commit** et le contrôle de démarrage **TCP par défaut**. Le test de `/health` a été effectué séparément par HTTP. Les réglages supplémentaires du fichier `render.yaml` sont une recette Blueprint alternative, pas les réglages appliqués à ce service. Les commits de documentation et de preuves utilisent `[skip render]` pour garder l’image applicative validée.
+
+La base SQLite du conteneur Render est éphémère : les stages doivent être recréés après mise en veille, redémarrage ou redéploiement. La vérification porte sur les résultats reçus à la date indiquée, et ne constitue pas une garantie de disponibilité permanente.

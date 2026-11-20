@@ -1,5 +1,20 @@
 # Réaliser et remettre le projet sous Windows
 
+## Situation actuelle et dernières actions sur le PC
+
+Le dépôt [Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api) est publié. Les tests GitHub Actions et Docker ont réussi. Le service Docker **Free** est déployé et [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) a été testé avec création, lecture, modification, suppression et réponse `404`. Les captures publiques sont déjà dans `preuves/render/captures/`.
+
+Les étapes 1 à 6 plus bas décrivent une installation reproductible. Pour ce dépôt déjà créé, il reste seulement à récupérer les changements et à compléter les captures accessibles depuis le PC :
+
+1. Ouvrir **GitHub Desktop**, sélectionner `ISIS_-gestion-stages-api`, cliquer **Fetch origin**, puis **Pull origin** si ce bouton apparaît.
+2. Choisir **Repository → Show in Explorer**. Dans la barre d’adresse de ce dossier, saisir `powershell`, puis appuyer sur Entrée. La fenêtre doit être ouverte au niveau de `Dockerfile`, `app/` et `scripts/`.
+3. Ouvrir Docker Desktop et attendre le moteur démarré. Dans cette fenêtre PowerShell, relancer les deux commandes de la section 3. Attendre **Validation terminée.** Faire une capture du terminal avec la ligne du conteneur actif, son port et les contrôles réussis ; l’enregistrer dans `preuves/docker/01-conteneur.png`.
+4. Ouvrir [Swagger local](http://127.0.0.1:8000/docs). Déplier **POST /stages → Try it out → Execute**. Faire défiler jusqu’à **Request URL**, **Server response**, le code `201` et le corps retourné. Enregistrer `preuves/docker/02-swagger-creation-201.png`. Cette capture valide précisément l’ouverture de Swagger dans le conteneur local.
+5. Ouvrir [le service Render existant](https://dashboard.render.com/web/srv-dc000o142hec738a2lhg), puis **Events**. Capturer l’événement **Live**, le nom du service et le commit ; enregistrer `preuves/render/01-deploiement-live.png`.
+6. Dans GitHub Desktop, sélectionner ces captures, saisir `[skip render] Ajouter les captures locales et Render` dans **Summary**, puis **Commit to main → Push origin**. Donner à l’enseignante l’accès au dépôt privé avec son identifiant GitHub confirmé avant la remise.
+
+Le terminal du PC et le tableau de bord connecté n’ont pas été capturés à distance. Le journal Docker fourni par le groupe, les résultats Actions, le reçu Render et les captures du service public sont déjà joints. Les détails figurent dans [preuves.md](preuves.md).
+
 ## 1. Installer deux applications
 
 | Application | Action |
@@ -76,4 +91,4 @@ powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\scripts\verifier
 
 Le script vérifie le CRUD public, enregistre `preuves/render/03-parcours-http.txt` et renseigne les deux liens dans le README après réussite. Il ouvre Swagger sur Render. Exécuter `GET /stages` et enregistrer `preuves/render/02-swagger-et-crud-public.png` avec l’adresse HTTPS et le `200` visibles.
 
-Revenir à GitHub Desktop. Dans **Changes**, vérifier les nouveaux éléments, saisir `Ajouter les liens et preuves de déploiement`, cliquer **Commit to main** puis **Push origin**. Un push limité au README et aux preuves conserve le déploiement en cours. Vérifier une dernière fois que le lien Render du README ouvre le bon service et que l’enseignante peut accéder au dépôt. La [checklist des preuves](preuves.md) récapitule les fichiers à joindre.
+Revenir à GitHub Desktop. Dans **Changes**, vérifier les nouveaux éléments, saisir `[skip render] Ajouter les liens et preuves de déploiement`, cliquer **Commit to main** puis **Push origin**. Ce message conserve le déploiement en cours sur le service créé directement. Le filtre du fichier Blueprint n’agit que sur un service auquel ce Blueprint a été appliqué. Vérifier une dernière fois que le lien Render du README ouvre le bon service et que l’enseignante peut accéder au dépôt. La [checklist des preuves](preuves.md) récapitule les fichiers à joindre.
