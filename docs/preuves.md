@@ -1,5 +1,26 @@
 # Captures et preuves
 
+## Interface web : version publique du 20 novembre 2026
+
+[Ouvrir l’application](https://isis-gestion-stages-api.onrender.com/#dashboard) · [Exécution Actions réussie du code déployé](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44708215645)
+
+Le commit `5c235fbada557890d916709f5d4a49bd274db514` est déployé sur le service Docker Free. Le [reçu](../preuves/interface/00-deploiement-interface.json) donne le service, le déploiement, le commit, les résultats et le contexte des contrôles. Les [extraits Actions](../preuves/interface/09-actions-interface.txt) confirment les 23 tests Python, les 100 % de couverture Python, les 7 tests JavaScript et le contrôle de l’image Docker, y compris l’accueil et ses ressources.
+
+Le [contrôle HTTP public](../preuves/interface/01-controle-http-public.txt) a réussi sur le commit d’ajout de l’interface `84314af2ad1b1f42435c68d92f2cd5ab5470ce29`. Le commit suivant corrige uniquement le retour en haut de page lors du changement de vue ; il a été vérifié dans le navigateur public et dans la CI. Les six exemples fictifs ont ensuite été chargés dans la version finale pour la démonstration.
+
+| Capture publique originale | Contenu |
+|---|---|
+| [02-tableau-de-bord.jpg](../preuves/interface/02-tableau-de-bord.jpg) | Six stages, répartition 2 / 2 / 2, aperçu et échéances. |
+| [03-liste-des-stages.jpg](../preuves/interface/03-liste-des-stages.jpg) | Liste, recherche, filtres, tri et actions de modification et suppression. |
+| [04-fiche-stage.jpg](../preuves/interface/04-fiche-stage.jpg) | Fiche de Camille Démo, dates et avancement calendaire. |
+| [05-entreprises.jpg](../preuves/interface/05-entreprises.jpg) | Trois entreprises et leurs indicateurs calculés. |
+| [06-calendrier.jpg](../preuves/interface/06-calendrier.jpg) | Départs et fins de stage dans le calendrier de décembre 2026. |
+| [07-formulaire.jpg](../preuves/interface/07-formulaire.jpg) | Formulaire de création avec les cinq champs éditables. |
+
+![Tableau de bord de l’interface publique](../preuves/interface/02-tableau-de-bord.jpg)
+
+Le contrôle de largeur réduite porte sur 340 pixels CSS, obtenus par zoom du navigateur : la largeur du document observée est de 337 pixels et le menu compact fonctionne. Il ne s’agit pas d’un test sur téléphone physique. Ces preuves de l’interface complètent les captures Swagger ci-dessous.
+
 ## Preuves locales jointes
 
 | Fichier | Contenu vérifiable |

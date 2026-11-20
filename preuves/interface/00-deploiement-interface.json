@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-11-20",
+  "service": {
+    "id": "srv-dc000o142hec738a2lhg",
+    "name": "isis-gestion-stages-api",
+    "url": "https://isis-gestion-stages-api.onrender.com",
+    "repo": "https://github.com/Remi26d/ISIS_-gestion-stages-api",
+    "branch": "main",
+    "runtime": "docker",
+    "plan": "free",
+    "region": "frankfurt",
+    "auto_deploy_trigger": "commit",
+    "health_check_path": ""
+  },
+  "deployment": {
+    "commit": {
+      "createdAt": "2026-11-20T09:08:44Z",
+      "id": "5c235fbada557890d916709f5d4a49bd274db514",
+      "message": "Revenir en haut de page lors du changement de vue"
+    },
+    "createdAt": "2026-11-20T09:08:45.645527Z",
+    "finishedAt": "2026-11-20T09:09:07.995197Z",
+    "id": "dep-dc00s78ae00c73aod3l0",
+    "startedAt": "2026-11-20T09:08:45.609394Z",
+    "status": "live",
+    "trigger": "new_commit",
+    "updatedAt": "2026-11-20T09:09:07.995349Z"
+  },
+  "ci": {
+    "run_id": 44708215645,
+    "job_id": 136193011505,
+    "commit": "5c235fbada557890d916709f5d4a49bd274db514",
+    "conclusion": "success",
+    "url": "https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44708215645"
+  },
+  "public_http_test": {
+    "commit": "84314af2ad1b1f42435c68d92f2cd5ab5470ce29",
+    "result": "success",
+    "note": "Le commit suivant change uniquement le retour en haut de page lors de la navigation."
+  },
+  "browser_final": {
+    "commit": "5c235fbada557890d916709f5d4a49bd274db514",
+    "demo_records": 6,
+    "companies": 3,
+    "active": 2,
+    "upcoming": 2,
+    "completed": 2,
+    "narrow_css_width": 340,
+    "document_width": 337,
+    "physical_phone_test": false
+  }
+}

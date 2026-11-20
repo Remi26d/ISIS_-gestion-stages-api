@@ -115,3 +115,11 @@ Les essais interactifs suivants ont été réalisés dans une prévisualisation 
 | Largeur réduite | Menu compact utilisable ; largeur de document inférieure ou égale à la fenêtre à 545 et 340 pixels CSS, contrôlés par zoom du navigateur. Il ne s’agit pas d’un essai sur téléphone physique. |
 
 Le contrôle HTTP en ligne de commande de cette prévisualisation n’a pas pu joindre ses ports depuis l’exécuteur, alors que le navigateur accédait au relais. Ce résultat ne vaut pas validation HTTP par ce chemin. Le workflow Docker et la vérification du service public contrôlent séparément l’accueil, les ressources statiques et le CRUD. Les preuves du déploiement de l’interface sont conservées dans `preuves/interface/` lorsqu’elles sont recueillies.
+
+## Validation de l’interface déployée
+
+Le commit `5c235fbada557890d916709f5d4a49bd274db514` est passé à **live le 20 novembre 2026 à 10:09, heure de Paris**, après le commit d’ajout de l’interface. La [CI 44708215645](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44708215645) a réussi : 23 tests Python, couverture Python de 100 %, 7 tests JavaScript, syntaxe PowerShell, construction Docker, accueil et ressources web dans le conteneur, puis CRUD complet.
+
+Le [parcours HTTP public](../preuves/interface/01-controle-http-public.txt) a été exécuté avec succès sur le commit d’ajout `84314af2ad1b1f42435c68d92f2cd5ab5470ce29`, avant la seule correction suivante de retour en haut lors de la navigation. Il vérifie `/`, le CSS, les deux modules JavaScript, les icônes, Swagger, OpenAPI, puis le CRUD avec suppression du stage temporaire.
+
+Dans le navigateur public sur la version finale, les six exemples ont été créés depuis le bouton de démonstration. L’accueil affiche six stages, trois entreprises, deux stages en cours, deux à venir et deux terminés. Les fiches sont relues depuis l’API. Les vues liste, entreprises et calendrier ont été ouvertes, le formulaire affiche le focus sur le premier champ, et la navigation compacte a été vérifiée à 340 pixels CSS. Les [six captures originales et le reçu de déploiement](preuves.md) sont joints. Les exemples de démonstration restent dans la base éphémère ; ils peuvent être recréés si Render la réinitialise.

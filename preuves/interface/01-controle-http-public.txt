@@ -1,0 +1,17 @@
+Vérification HTTP de https://isis-gestion-stages-api.onrender.com
+GET    /health            HTTP 200
+GET    /                  HTTP 200
+GET    /assets/style.css  HTTP 200
+GET    /assets/app.js     HTTP 200
+GET    /assets/model.mjs  HTTP 200
+GET    /assets/icons.svg  HTTP 200
+GET    /docs              HTTP 200
+GET    /openapi.json      HTTP 200
+POST   /stages            HTTP 201
+GET    /stages            HTTP 200
+GET    /stages/7          HTTP 200
+PUT    /stages/7          HTTP 200
+GET    /stages/7          HTTP 200
+DELETE /stages/7          HTTP 204
+GET    /stages/7          HTTP 404
+Contrôles HTTP réussis.

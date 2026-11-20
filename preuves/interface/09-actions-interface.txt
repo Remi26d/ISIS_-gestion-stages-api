@@ -1,0 +1,97 @@
+Extraits authentiques du journal GitHub Actions
+Commit : 5c235fbada557890d916709f5d4a49bd274db514
+Exécution : https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44708215645
+Job : 136193011505
+Conclusion vérifiée : success
+
+2026-11-20T09:08:49.9766114Z ##[group]Runner Image Provisioner
+2026-11-20T09:08:49.9795649Z ##[endgroup]
+2026-11-20T09:08:49.9798174Z ##[group]Operating System
+2026-11-20T09:08:49.9801772Z ##[endgroup]
+2026-11-20T09:08:49.9802663Z ##[group]Runner Image
+2026-11-20T09:08:49.9811535Z ##[endgroup]
+2026-11-20T09:08:49.9813324Z ##[group]GITHUB_TOKEN Permissions
+2026-11-20T09:08:49.9839282Z ##[endgroup]
+2026-11-20T09:08:50.7960554Z ##[group]Run actions/checkout@v6
+2026-11-20T09:08:50.7971657Z ##[endgroup]
+2026-11-20T09:08:51.1282268Z ##[group]Getting Git version info
+2026-11-20T09:08:51.1289238Z ##[endgroup]
+2026-11-20T09:08:51.1305735Z ##[group]Determining repository object format
+2026-11-20T09:08:51.1307077Z ##[endgroup]
+2026-11-20T09:08:51.1308541Z ##[group]Initializing the repository
+2026-11-20T09:08:51.1447253Z ##[endgroup]
+2026-11-20T09:08:51.1448821Z ##[group]Disabling automatic garbage collection
+2026-11-20T09:08:51.1577892Z ##[endgroup]
+2026-11-20T09:08:51.1605357Z ##[group]Setting up auth
+2026-11-20T09:08:51.3042983Z ##[endgroup]
+2026-11-20T09:08:51.3044847Z ##[group]Fetching the repository
+2026-11-20T09:08:51.9950363Z ##[endgroup]
+2026-11-20T09:08:51.9952406Z ##[group]Determining the checkout info
+2026-11-20T09:08:51.9955447Z ##[endgroup]
+2026-11-20T09:08:52.0046588Z ##[group]Checking out the ref
+2026-11-20T09:08:52.0170568Z ##[endgroup]
+2026-11-20T09:08:52.0572371Z ##[group]Run actions/setup-python@v6
+2026-11-20T09:08:52.0581760Z ##[endgroup]
+2026-11-20T09:08:52.2092539Z ##[group]Installed versions
+2026-11-20T09:08:52.2196853Z ##[endgroup]
+2026-11-20T09:08:54.5145236Z ##[group]Run python -m pip install --requirement requirements-dev.txt
+2026-11-20T09:08:54.5189097Z ##[endgroup]
+2026-11-20T09:08:59.8968967Z ##[group]Run ruff check app tests scripts
+2026-11-20T09:08:59.9004734Z ##[endgroup]
+2026-11-20T09:08:59.9134707Z All checks passed!
+2026-11-20T09:08:59.9168735Z ##[group]Run python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=80
+2026-11-20T09:08:59.9203313Z ##[endgroup]
+2026-11-20T09:09:02.2557191Z Name              Stmts   Miss Branch BrPart   Cover   Missing
+2026-11-20T09:09:02.2559023Z app/__init__.py       0      0      0      0  100.0%
+2026-11-20T09:09:02.2559715Z app/database.py      43      0      0      0  100.0%
+2026-11-20T09:09:02.2560350Z app/main.py          63      0     10      0  100.0%
+2026-11-20T09:09:02.2560962Z app/schemas.py       32      0      6      0  100.0%
+2026-11-20T09:09:02.2562226Z TOTAL               138      0     16      0  100.0%
+2026-11-20T09:09:02.2563597Z ======================== 23 passed, 1 warning in 1.40s =========================
+2026-11-20T09:09:02.3679185Z ##[group]Run actions/setup-node@v6
+2026-11-20T09:09:02.3685699Z ##[endgroup]
+2026-11-20T09:09:02.5242250Z ##[group]Environment details
+2026-11-20T09:09:03.0508738Z ##[endgroup]
+2026-11-20T09:09:03.0602525Z ##[group]Run node --check app/web/app.js
+2026-11-20T09:09:03.0640884Z ##[endgroup]
+2026-11-20T09:09:03.2444339Z ✔ Le premier et le dernier jour appartiennent au stage en cours (0.834711ms)
+2026-11-20T09:09:03.2445959Z ✔ La durée calendaire compte les bornes et les années bissextiles (0.232183ms)
+2026-11-20T09:09:03.2454958Z ✔ Les dates locales sont conservées sans conversion UTC (1.13308ms)
+2026-11-20T09:09:03.2456011Z ✔ L’avancement est borné, y compris pour un stage d’un jour (0.212894ms)
+2026-11-20T09:09:03.2457232Z ✔ La recherche combine les mots sans accents et les filtres sans modifier la source (16.215885ms)
+2026-11-20T09:09:03.2458535Z ✔ Le CSV protège les formules et conserve guillemets, accents et sauts de ligne (0.624209ms)
+2026-11-20T09:09:03.2459736Z ✔ Les valeurs utilisateur deviennent du texte dans les vues HTML (0.23919ms)
+2026-11-20T09:09:03.2486447Z ℹ tests 7
+2026-11-20T09:09:03.2487123Z ℹ suites 0
+2026-11-20T09:09:03.2488611Z ℹ pass 7
+2026-11-20T09:09:03.2489166Z ℹ fail 0
+2026-11-20T09:09:03.2490038Z ℹ cancelled 0
+2026-11-20T09:09:03.2490539Z ℹ skipped 0
+2026-11-20T09:09:03.2493877Z ℹ todo 0
+2026-11-20T09:09:03.2495323Z ℹ duration_ms 92.653137
+2026-11-20T09:09:03.2570436Z ##[group]Run $jetons = $null
+2026-11-20T09:09:03.2610290Z ##[endgroup]
+2026-11-20T09:09:07.6613078Z ##[group]Run docker build --tag gestion-stages-api:ci .
+2026-11-20T09:09:07.6646297Z ##[endgroup]
+2026-11-20T09:09:15.6969622Z #11 exporting layers
+2026-11-20T09:09:15.6970185Z #11 exporting layers 0.6s done
+2026-11-20T09:09:15.9619090Z ##[group]Run docker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci
+2026-11-20T09:09:15.9664186Z ##[endgroup]
+2026-11-20T09:09:17.3880036Z GET    /health            HTTP 200
+2026-11-20T09:09:17.3903293Z GET    /                  HTTP 200
+2026-11-20T09:09:17.3904750Z GET    /assets/style.css  HTTP 200
+2026-11-20T09:09:17.3905809Z GET    /assets/app.js     HTTP 200
+2026-11-20T09:09:17.3906639Z GET    /assets/model.mjs  HTTP 200
+2026-11-20T09:09:17.3907513Z GET    /assets/icons.svg  HTTP 200
+2026-11-20T09:09:17.3908143Z GET    /docs              HTTP 200
+2026-11-20T09:09:17.3908954Z GET    /openapi.json      HTTP 200
+2026-11-20T09:09:17.3909646Z POST   /stages            HTTP 201
+2026-11-20T09:09:17.3910431Z GET    /stages            HTTP 200
+2026-11-20T09:09:17.3911057Z GET    /stages/1          HTTP 200
+2026-11-20T09:09:17.3911941Z PUT    /stages/1          HTTP 200
+2026-11-20T09:09:17.3912623Z GET    /stages/1          HTTP 200
+2026-11-20T09:09:17.3913409Z DELETE /stages/1          HTTP 204
+2026-11-20T09:09:17.3914213Z GET    /stages/1          HTTP 404
+2026-11-20T09:09:17.3915250Z Contrôles HTTP réussis.
+2026-11-20T09:09:17.4015183Z ##[group]Run if docker container inspect gestion-stages-ci > /dev/null 2>&1; then
+2026-11-20T09:09:17.4050093Z ##[endgroup]
