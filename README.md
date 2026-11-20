@@ -118,7 +118,7 @@ docker run --detach --name gestion-stages --publish 127.0.0.1:8000:8000 gestion-
 
 Ouvrir [Swagger dans le conteneur](http://127.0.0.1:8000/docs), puis suivre le [guide Docker et Render](docs/deploiement.md). Les commandes sont identiques sous PowerShell et Bash. Le conteneur écoute sur `0.0.0.0` et prend le port de `PORT` lorsque la variable est fournie.
 
-**Dépôt GitHub** · adresse à renseigner après publication.
+**Dépôt GitHub** · [https://github.com/Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api)
 
 **URL publique Render** · adresse à renseigner après validation du service en HTTPS.
 

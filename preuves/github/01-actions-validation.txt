@@ -1,0 +1,21 @@
+Extraits du journal GitHub Actions du 20 novembre 2026
+Exécution : https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44699251269
+Job : verifier (136163344613)
+Commit : d2d02e04673353f0498a88c72186aaee2037850b
+Conclusion observée via GitHub : success
+
+2026-11-20T08:01:28.4844242Z All checks passed!
+2026-11-20T08:01:30.6451899Z TOTAL               131      0     16      0  100.0%
+2026-11-20T08:01:30.6452408Z Required test coverage of 80% reached. Total coverage: 100.00%
+2026-11-20T08:01:30.6453503Z ======================== 21 passed, 1 warning in 1.32s =========================
+2026-11-20T08:01:42.4828743Z curl: (56) Recv failure: Connection reset by peer
+2026-11-20T08:01:43.5738477Z GET    /health            HTTP 200
+2026-11-20T08:01:43.5739189Z GET    /docs              HTTP 200
+2026-11-20T08:01:43.5739634Z GET    /openapi.json      HTTP 200
+2026-11-20T08:01:43.5740046Z POST   /stages            HTTP 201
+2026-11-20T08:01:43.5740462Z GET    /stages            HTTP 200
+2026-11-20T08:01:43.5740862Z GET    /stages/1          HTTP 200
+2026-11-20T08:01:43.5741297Z PUT    /stages/1          HTTP 200
+2026-11-20T08:01:43.5741756Z GET    /stages/1          HTTP 200
+2026-11-20T08:01:43.5742173Z DELETE /stages/1          HTTP 204
+2026-11-20T08:01:43.5742586Z GET    /stages/1          HTTP 404

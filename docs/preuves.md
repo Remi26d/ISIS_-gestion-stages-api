@@ -7,8 +7,18 @@
 | [01-tests-couverture.txt](../preuves/local/01-tests-couverture.txt) | Sortie réelle de la suite, des résultats et de la mesure des lignes. |
 | [02-parcours-http.txt](../preuves/local/02-parcours-http.txt) | Requêtes du scénario complet sur Uvicorn local et statuts reçus. |
 | [03-journaux-uvicorn.txt](../preuves/local/03-journaux-uvicorn.txt) | Journaux de démarrage, d’accès et d’arrêt du serveur HTTP local. |
+| [04-pytest-cov.txt](../preuves/local/04-pytest-cov.txt) | 21 tests réussis et couverture des instructions et branches mesurée avec pytest-cov le 20 novembre 2026. |
+| [05-ruff.txt](../preuves/local/05-ruff.txt) | Contrôle Ruff réussi le 20 novembre 2026. |
 
 Ces traces correspondent à une exécution hors conteneur avec une base temporaire. Les captures exigées pour la remise sont à réaliser dans les environnements indiqués ci-dessous.
+
+## Journal Docker fourni par le groupe
+
+Le [journal Docker du 20 novembre 2026](../preuves/docker/00-validation-docker.txt) confirme la construction de l’image, le démarrage du conteneur, l’accès au port publié et le CRUD complet. Les captures de Swagger, de GitHub Actions et du déploiement Render restent à collecter.
+
+## Exécution GitHub Actions vérifiée
+
+L’[exécution 44699251269](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44699251269) est terminée avec la conclusion `success`. Les [extraits du journal](../preuves/github/01-actions-validation.txt) montrent les tests, la couverture et le CRUD en conteneur. La capture de l’interface Actions complète ces traces lors de la remise.
 
 ## Collecte avant remise
 
