@@ -1,6 +1,8 @@
 # Gestion des stages
 
-API REST de gestion des stages d’une école d’ingénieurs. Elle permet de créer, consulter, remplacer et supprimer des stages fictifs. Les stages sont stockés dans un fichier SQLite et le contrat OpenAPI est consultable dans Swagger.
+Application web et API REST de gestion des stages d’une école d’ingénieurs. L’interface permet de créer, consulter, modifier et supprimer des stages fictifs, rechercher les parcours, suivre les dates clés et exporter les résultats. Les stages sont stockés dans un fichier SQLite et le contrat OpenAPI reste consultable dans Swagger.
+
+**[Ouvrir l’application web](https://isis-gestion-stages-api.onrender.com/)** · [Tester l’API dans Swagger](https://isis-gestion-stages-api.onrender.com/docs) · [Guide de l’interface](docs/interface.md)
 
 **ISIS Castres · FISA5 / FIA5 · 2026–2027**
 
@@ -32,6 +34,7 @@ python3.12 -m venv .venv
 ./.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
+- [Ouvrir l’interface web](http://127.0.0.1:8000/)
 - [Ouvrir Swagger](http://127.0.0.1:8000/docs)
 - [Consulter le contrat OpenAPI](http://127.0.0.1:8000/openapi.json)
 - [Vérifier le démarrage](http://127.0.0.1:8000/health)
@@ -87,6 +90,7 @@ Une requête HTTP arrive dans FastAPI. Pydantic transforme et valide les champs 
 | `app/main.py` | Routes HTTP, réponses et initialisation au démarrage |
 | `app/schemas.py` | Schémas d’entrée et de sortie, dates et règles de validation |
 | `app/database.py` | Création de la table et accès SQLite |
+| `app/web/` | Interface HTML/CSS/JavaScript, servie à `/`, appels à la même API |
 | `tests/` | Tests unitaires et HTTP avec FastAPI TestClient |
 | `Dockerfile`, `.dockerignore`, `render.yaml` | Image Docker et configuration du service Render |
 | `.github/workflows/ci.yml` | Ruff, tests, couverture, construction Docker et test HTTP du conteneur |
@@ -107,6 +111,8 @@ python -m pytest --cov=app --cov-report=term-missing --cov-report=html --cov-fai
 
 Chaque test d’intégration ouvre sa propre base SQLite temporaire et lance le cycle de vie de FastAPI avec `TestClient`. Le rapport HTML de `pytest-cov` est généré dans `htmlcov/`. Les résultats obtenus et les contrôles en attente figurent dans le [rapport de vérification](docs/verification.md).
 
+La logique de l’interface a ses tests séparés, exécutables avec Node 24 : `node --test tests/test_web_logic.mjs`. Ils vérifient les dates, les statuts, les recherches combinées, l’échappement HTML et la protection du CSV contre les formules. Node n’est pas requis pour exécuter l’image Docker : les fichiers web sont servis directement par FastAPI.
+
 ## Docker et Render
 
 Avec Docker Desktop démarré sous Windows ou Docker Engine sous Linux, lancer les commandes depuis la racine du projet.
@@ -120,9 +126,9 @@ Ouvrir [Swagger dans le conteneur](http://127.0.0.1:8000/docs), puis suivre le [
 
 **Dépôt GitHub** · [https://github.com/Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api)
 
-**URL publique Render** · [Ouvrir Swagger et tester l’API](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde de disponibilité](https://isis-gestion-stages-api.onrender.com/health).
+**URL publique Render** · [Ouvrir l’application](https://isis-gestion-stages-api.onrender.com/) · [Swagger](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde de disponibilité](https://isis-gestion-stages-api.onrender.com/health).
 
-Le service `isis-gestion-stages-api` est déployé en Docker sur le plan **Free**, en région **Francfort**. Le 20 novembre 2026, Render a confirmé l’état `live` et le parcours CRUD public a réussi. Les [captures Swagger et les journaux](docs/preuves.md) sont joints. Le commit applicatif déployé est `ed8258ebeff0e89967831a40cf612dff315567c0` ; les commits suivants consacrés aux preuves peuvent porter `[skip render]` pour conserver ce déploiement.
+Le service `isis-gestion-stages-api` utilise Docker sur le plan **Free**, en région **Francfort**. Les [preuves](docs/preuves.md) conservent les vérifications de l’API et de l’interface, avec leurs dates et commits. L’interface, l’API et Swagger sont servis dans le même conteneur. Les commits limités aux preuves peuvent porter `[skip render]` pour conserver l’image en cours ; un changement applicatif doit être déployé et vérifié.
 
 Sur Render Free, le fichier SQLite est recréé au besoin. Les modifications locales sont perdues au redéploiement, au redémarrage ou à la mise en veille. Les endpoints sont publics et destinés aux stages fictifs. Un usage réel demanderait une authentification, des autorisations, une journalisation adaptée et un stockage durable. [Documentation Render Free](https://render.com/docs/free)
 

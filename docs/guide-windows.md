@@ -1,5 +1,22 @@
 # Réaliser et remettre le projet sous Windows
 
+## Si Fetch origin affiche Could not resolve host: github.com
+
+Ce message indique un échec de résolution DNS de `github.com` sur le PC. Il ne signifie pas que le dépôt a été supprimé. L’application web reste utilisable directement dans le navigateur : [ouvrir l’interface](https://isis-gestion-stages-api.onrender.com/).
+
+1. Fermer la fenêtre d’erreur de GitHub Desktop. Dans Chrome, essayer d’ouvrir `https://github.com`.
+2. Ouvrir **Windows PowerShell en administrateur** depuis le menu Démarrer. Exécuter les deux lignes suivantes, une par une. La première vide le cache DNS ; la seconde vérifie si le PC retrouve l’adresse de GitHub.
+
+   ```powershell
+   ipconfig /flushdns
+   nslookup github.com
+   ```
+
+3. Fermer puis rouvrir GitHub Desktop et réessayer **Fetch origin**, puis **Pull origin** si proposé.
+4. Si `nslookup` échoue encore, essayer une autre connexion, par exemple le partage de connexion du téléphone, puis relancer Fetch. Un réseau filtré, un DNS défaillant ou une configuration VPN/proxy peuvent nécessiter un diagnostic du réseau utilisé.
+
+Le dépôt existant doit être conservé. Les mises à jour publiées à distance ne dépendent pas de la réussite de Fetch sur ce PC. [Diagnostic DNS Microsoft](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/troubleshoot-dns-client-resolution-issues) · [Clear-DnsClientCache](https://learn.microsoft.com/powershell/module/dnsclient/clear-dnsclientcache)
+
 ## Situation actuelle et dernières actions sur le PC
 
 Le dépôt [Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api) est publié. Les tests GitHub Actions et Docker ont réussi. Le service Docker **Free** est déployé et [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) a été testé avec création, lecture, modification, suppression et réponse `404`. Les captures publiques sont déjà dans `preuves/render/captures/`.

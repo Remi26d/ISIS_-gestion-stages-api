@@ -92,3 +92,26 @@ Le stage d’id `1` a été créé puis supprimé par le contrôle automatisé. 
 Le service créé directement utilise le déclenchement automatique **sur commit** et le contrôle de démarrage **TCP par défaut**. Le test de `/health` a été effectué séparément par HTTP. Les réglages supplémentaires du fichier `render.yaml` sont une recette Blueprint alternative, pas les réglages appliqués à ce service. Les commits de documentation et de preuves utilisent `[skip render]` pour garder l’image applicative validée.
 
 La base SQLite du conteneur Render est éphémère : les stages doivent être recréés après mise en veille, redémarrage ou redéploiement. La vérification porte sur les résultats reçus à la date indiquée, et ne constitue pas une garantie de disponibilité permanente.
+
+## Interface web 1.1 : vérification du 20 novembre 2026
+
+L’interface est ajoutée à `/`, dans le même service et sans changer le modèle SQLite. La vérification Python de cette version aboutit à **23 tests réussis et 57 sous-tests**, avec **138 instructions et 16 issues de branche couvertes sur 138 et 16, soit 100 %**. Les ressources statiques ne sont pas incluses dans ce pourcentage Python. Les **7 tests JavaScript** séparés passent sur Node 24.
+
+Les essais interactifs suivants ont été réalisés dans une prévisualisation avec une base de démonstration isolée :
+
+| Contrôle dans le navigateur | Résultat observé |
+|---|---|
+| Base vide | Indicateurs à zéro et proposition explicite d’ajouter un stage ou six exemples fictifs. |
+| Démonstration | Six stages enregistrés ; deux en cours, deux à venir et deux terminés ; trois entreprises. |
+| Validation du formulaire | Champs obligatoires signalés ; dates de fin antérieures au début rejetées. |
+| Création | Un stage fictif de test apparaît dans la liste et les indicateurs. |
+| Recherche | `ETUDIANT interface` retrouve `Étudiant Test Interface`, malgré la casse et l’accent. |
+| Modification et lecture | L’intitulé modifié apparaît dans la fiche relue depuis l’API. |
+| Suppression | Annuler conserve le stage ; confirmer le supprime ; les six exemples restent présents. |
+| Filtres combinés | Statut En cours et entreprise Atelier Santé Démo donnent un seul stage. |
+| Export | CSV téléchargé, un seul stage filtré, Camille présente et Nora absente. |
+| Entreprises | Trois cartes cohérentes ; Consulter les stages ouvre deux stages de l’entreprise choisie. |
+| Calendrier | Décembre 2026 montre le départ de Louis le 11 et la fin de Nora le 12 ; l’événement ouvre la fiche correspondante. |
+| Largeur réduite | Menu compact utilisable ; largeur de document inférieure ou égale à la fenêtre à 545 et 340 pixels CSS, contrôlés par zoom du navigateur. Il ne s’agit pas d’un essai sur téléphone physique. |
+
+Le contrôle HTTP en ligne de commande de cette prévisualisation n’a pas pu joindre ses ports depuis l’exécuteur, alors que le navigateur accédait au relais. Ce résultat ne vaut pas validation HTTP par ce chemin. Le workflow Docker et la vérification du service public contrôlent séparément l’accueil, les ressources statiques et le CRUD. Les preuves du déploiement de l’interface sont conservées dans `preuves/interface/` lorsqu’elles sont recueillies.

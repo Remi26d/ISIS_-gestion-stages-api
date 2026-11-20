@@ -15,6 +15,12 @@ Préparer le résultat des tests, le conteneur local et la page **Live** de Rend
 
 Répéter la séquence entière une fois avec la même version du dépôt. En cas de démarrage à froid pendant la présentation, ouvrir les captures du service public, poursuivre avec le conteneur local, puis revenir à l’URL quand `/health` répond.
 
+## Présenter l’interface web
+
+L’[accueil](https://isis-gestion-stages-api.onrender.com/) fournit la démonstration métier. En 60 à 90 secondes supplémentaires, ouvrir les indicateurs, créer un stage fictif, rechercher son nom, modifier sa mission, consulter sa fiche puis confirmer sa suppression. Montrer ensuite le calendrier et le filtrage depuis une entreprise. L’interface est un complément ; conserver les appels Swagger et les codes HTTP du déroulé pour répondre à l’exigence technique de l’énoncé.
+
+Les six exemples du bouton de démonstration sont ajoutés seulement après confirmation. Les utiliser si la base a été réinitialisée par Render Free. Node n’est utilisé que pour les tests JavaScript et le lancement de la prévisualisation ; l’image de production reste une image Python qui sert aussi les fichiers web.
+
 ## Notions du cours appliquées
 
 | Notion | Application au projet | Support du cours |

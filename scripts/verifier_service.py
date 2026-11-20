@@ -39,6 +39,16 @@ def verifier_service(url: str) -> None:
     print(f"Vérification HTTP de {url}")
     contenu, _ = appeler(url, "GET", "/health", 200)
     verifier_condition(json.loads(contenu) == {"status": "ok"}, "État du service inattendu.")
+    contenu, _ = appeler(url, "GET", "/", 200)
+    verifier_condition(b'id="stageForm"' in contenu, "Interface web attendue.")
+    for chemin, marqueur in (
+        ("/assets/style.css", b".sidebar"),
+        ("/assets/app.js", b"loadStages"),
+        ("/assets/model.mjs", b"stageStatus"),
+        ("/assets/icons.svg", b'<symbol id="cap"'),
+    ):
+        contenu, _ = appeler(url, "GET", chemin, 200)
+        verifier_condition(marqueur in contenu, f"Ressource de l’interface absente : {chemin}")
     contenu, _ = appeler(url, "GET", "/docs", 200)
     verifier_condition(b"SwaggerUIBundle" in contenu, "Page Swagger attendue.")
     contenu, _ = appeler(url, "GET", "/openapi.json", 200)

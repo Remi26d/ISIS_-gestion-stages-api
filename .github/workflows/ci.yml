@@ -24,6 +24,14 @@ jobs:
         run: ruff check app tests scripts
       - name: Exécuter les tests et mesurer la couverture
         run: python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=80
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Vérifier JavaScript et la logique de l’interface
+        run: |
+          node --check app/web/app.js
+          node --check app/web/model.mjs
+          node --test tests/test_web_logic.mjs
       - name: Vérifier la syntaxe du script Windows
         shell: pwsh
         run: |

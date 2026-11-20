@@ -1,0 +1,11 @@
+{
+  "name": "isis-gestion-stages-interface",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Interface statique servie par FastAPI. Node sert uniquement aux tests et à la prévisualisation.",
+  "scripts": {
+    "dev": "python3 scripts/preview_web.py",
+    "test": "node --test tests/test_web_logic.mjs"
+  }
+}

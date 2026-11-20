@@ -6,6 +6,8 @@ from typing import Annotated, Literal
 
 from fastapi import FastAPI, HTTPException, Request, Response, status
 from fastapi import Path as ParametreChemin
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BeforeValidator
 
 from app.database import BaseStages
@@ -13,6 +15,7 @@ from app.schemas import Erreur, Stage, StageSaisie
 
 MESSAGE_STAGE_ABSENT = "Stage introuvable."
 REPONSE_STAGE_ABSENT = {404: {"model": Erreur, "description": MESSAGE_STAGE_ABSENT}}
+DOSSIER_WEB = Path(__file__).resolve().parent / "web"
 
 
 def verifier_format_identifiant(valeur: str) -> str:
@@ -41,9 +44,18 @@ def create_app(chemin_base: Path | None = None) -> FastAPI:
     service = FastAPI(
         title="Gestion des stages",
         description="Gérer les stages fictifs d’une école d’ingénieurs.",
-        version="1.0.0",
+        version="1.1.0",
         lifespan=duree_de_vie,
     )
+
+    @service.get("/", include_in_schema=False, response_class=FileResponse)
+    def ouvrir_interface() -> FileResponse:
+        return FileResponse(
+            DOSSIER_WEB / "index.html",
+            headers={"Cache-Control": "no-cache", "X-Content-Type-Options": "nosniff"},
+        )
+
+    service.mount("/assets", StaticFiles(directory=DOSSIER_WEB), name="assets")
 
     @service.get("/health", tags=["Service"], summary="Vérifier la disponibilité du service")
     def lire_sante() -> dict[str, Literal["ok"]]:
