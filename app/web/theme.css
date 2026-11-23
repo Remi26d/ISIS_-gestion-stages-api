@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* Couleurs relevées sur le logo fourni. Le fichier du logo reste inchangé. */
+:root {
+  --isis-coral: #f46964;
+  --isis-purple: #804fdf;
+  --isis-primary: #7040c3;
+  --ink: #30233f;
+  --muted: #73667f;
+  --green: var(--isis-primary);
+  --mint: #f0e8fc;
+  --line: #eae4f1;
+  --canvas: #faf8fc;
+  --red: #b7354c;
+}
+button:focus-visible, a:focus-visible, select:focus-visible,
+input:focus-visible, textarea:focus-visible { outline-color: var(--isis-purple); }
+.school-logo { display: block; width: 52px; height: 52px; object-fit: contain; flex-shrink: 0; }
+.brand { gap: 11px; margin-left: 5px; margin-bottom: 42px; }
+.brand-dot { color: var(--isis-coral); }
+.brand small, .nav-caption, .eyebrow { color: #776681; }
+.sidebar { border-top: 4px solid transparent; border-image: linear-gradient(90deg,var(--isis-coral),var(--isis-purple)) 1; }
+.nav-link { color: #73667e; }
+.nav-link:hover { background: #f7f2fc; }
+.nav-link.active { background: #f0e8fc; color: #6b37b8; }
+.nav-count { background: #f0edf4; color: #73667e; }
+.active .nav-count { background: #e2d2f9; color: #6234a5; }
+.sidebar-bottom { padding-top: 30px; }
+.sidebar-note { background: linear-gradient(125deg,#fff3f0,#f3edfc); border-color: #eadff2; }
+.sidebar-note p, .team-profile span, .academic-label { color: #796284; }
+.api-link { color: #73617f; }
+.guide-link { color: #6b37b8; font-weight: 600; font-size: 13px; }
+.guide-arrow { display: none; }
+.team-avatar { background: linear-gradient(135deg,#fbe2dd,#e9dcfb); color: #7040a8; }
+.breadcrumb { color: #86758f; }
+.breadcrumb span { color: #c6b9cf; }
+.breadcrumb strong { color: #65516f; }
+.connection { color: #7440b3; }
+.status-dot { background: #935ed8; }
+.connection.checking { color: #89644f; }
+.checking .status-dot { background: #d78d77; }
+.button-primary { background: var(--isis-primary); box-shadow: 0 3px 8px #804fdf16; }
+.button-primary:hover { background: #5b2ba5; box-shadow: 0 4px 12px #804fdf28; }
+.button-white { border-color: #e4daed; color: #675176; }
+.button-white:hover { background: #f6f0fc; }
+.button-dark { background: #563079; }
+.button-dark:hover { background: #42215f; }
+.icon-button { color: #86718f; }
+.icon-button:hover { background: #f2ebfa; }
+.demo-notice { color: #7b5c79; background: #faf0f7; border-color: #efdfeb; }
+.demo-notice p, .demo-notice strong { color: #785670; }
+.metric-top, .detail-company { color: #756080; }
+.metric-icon { background: #f3edf9; color: #8966ad; }
+.metric-icon.active { background: #eee3fc; color: #8350bd; }
+.metric-icon.upcoming { background: #fff0eb; color: #af574b; }
+.metric-icon.completed { background: #f0edf4; color: #7b6e8c; }
+.metric-card:hover { box-shadow: 0 6px 18px #5b34760d; }
+.welcome-card { background: linear-gradient(115deg,#fff0e9 0%,#f9eaf4 46%,#ede2fc 100%); }
+.section-kicker { color: #956377; }
+.tiny-line { background: #c08ba4; }
+.welcome-card h2 { color: #533262; }
+.welcome-card p { color: #87647e; }
+.art-orbit { border-color: #d4b6df; }
+.art-sheet { background: #fffafd; border-color: #e7cce3; box-shadow: 10px 14px 22px #b374a51c; }
+.art-sheet>span { background: #eddaed; }
+.art-check { background: #ecdcfa; color: #8d4fc3; }
+.art-cap { color: #935fc2; border-color: #e5cfed; box-shadow: 0 8px 15px #9b62b51a; }
+.art-spark { color: var(--isis-coral); }
+.distribution-card, .status-ring>div { background: #30213f; }
+.status-ring { background: #524365; }
+.card-topline { color: #e7d8f4; }
+.card-topline .icon { color: #b096c8; }
+.status-ring span { color: #c6aed8; }
+.legend-row { color: #d0badf; }
+.legend-row strong { color: #f4e9fb; }
+.legend-marker { background: #bfa0f0; }
+.legend-marker.upcoming { background: #f49b94; }
+.legend-marker.completed { background: #bdb7cc; }
+.distribution-footnote { color: #c4aed6; }
+.page-description, .panel-heading p, .cell-secondary, .metric-note,
+.upcoming-copy p, .empty-state p, .required-note, .calendar-summary,
+.companies-toolbar>p, .company-card-top p, .company-missions,
+.company-metrics span, .calendar-weekdays span, .day-number, .table-meta,
+.sort-wrap, .page-footer, .page-footer>div, .progress-caption, .drawer-notice,
+.details-dialog .progress-caption, .duration-preview, .confirm-body p,
+.confirm-body p.muted { color: #776680; }
+thead, .calendar-weekdays { background: #fbf8fd; }
+th { color: #796683; }
+td { border-bottom-color: #f0eaf4; }
+tbody tr:hover { background: #fdfaff; }
+.student-link { color: #5f436d; }
+.cell-text, .date-cell { color: #7c6685; }
+.avatar { background: #eee4fa; color: #8a58b5; }
+.avatar.tone-1 { background: #fbe2e8; color: #a25372; }
+.avatar.tone-2 { background: #ffede4; color: #a65c48; }
+.avatar.tone-3 { background: #eae5f3; color: #796293; }
+.badge { color: #7540aa; background: #f1e7fc; }
+.badge.upcoming { color: #a24e45; background: #fff0eb; }
+.badge.completed { color: #756681; background: #f0edf4; }
+.empty-illustration { color: #a17fc0; background: #f5effa; border-color: #e9dcef; }
+.empty-state h3 { color: #62446f; }
+.date-tile { color: #8d5fb0; background: #f2eafa; }
+.upcoming-copy strong { color: #6b487c; }
+.upcoming-item { border-color: #f0e7f3; }
+.search-box, select { border-color: #e7deee; }
+.search-box:focus-within { border-color: #ac86dd; box-shadow: 0 0 0 3px #804fdf0b; }
+.search-box .icon, .search-box input::placeholder,
+.field input::placeholder, .field textarea::placeholder { color: #887391; }
+.search-box input, select, .sort-wrap select { color: #72527f; }
+.select-wrap:after { border-color: #9f86ad; }
+.page-number { color: #8b709d; }
+.pagination, .calendar-key { color: #7f648c; }
+.pagination .icon-button { border-color: #e8dfee; }
+.footer-dot { color: #c7b8cf; }
+.calendar-toolbar p { color: #8b7496; }
+.key-start { background: #a979dc; }
+.key-end { background: #ea9489; }
+.calendar-day { border-color: #eee7f4; }
+.calendar-day.other-month { background: #fdfbfe; }
+.other-month .day-number { color: #c8bbd1; }
+.calendar-day.is-today { background: #f8f0ff; }
+.calendar-event { background: #f0e4fc; color: #7645a6; }
+.calendar-event.end { background: #ffede7; color: #a35c54; }
+.calendar-event:hover { background: #e5d2f8; }
+.calendar-event.end:hover { background: #fbdcd5; }
+.more-events { color: #8854af; }
+.company-icon { background: #f0e5fb; color: #9763bc; }
+.company-card:hover { border-color: #d7c1eb; box-shadow: 0 5px 18px #7040a80b; }
+.company-metrics { border-color: #eee6f5; }
+.company-metrics strong { color: #72517f; }
+.field label { color: #70557c; }
+.field input, .field textarea { color: #593b67; border-color: #e4d9ed; }
+.field input:focus, .field textarea:focus { border-color: #ac86dd; box-shadow: 0 0 0 3px #804fdf0b; }
+.duration-preview { background: #f7f0fc; border-color: #e7d9f0; }
+.confirm-icon { background: #f1e5fc; color: #8b56bc; }
+.progress-track { background: #f0e7f7; }
+.progress-fill { background: linear-gradient(90deg,var(--isis-coral),var(--isis-purple)); }
+.drawer-title { color: #684776; }
+.drawer-identity p { color: #8e759b; }
+.drawer-notice { background: #f7f0fc; }
+.toast { background: #30213f; color: #f5eafb; box-shadow: 0 6px 28px #4d2a6824; }
+.toast .icon { color: #f49b94; }
+.subdued { color: #aa90b6; }
+@media(max-height:760px) and (min-width:801px) {
+  .sidebar { overflow-y:auto; }
+  .brand { margin-bottom:28px; }
+  .sidebar-note { padding:12px; margin-bottom:8px; }
+  .sidebar-note .small-icon { display:none; }
+  .sidebar-note p { margin-bottom:8px; }
+  .sidebar-bottom { padding-top:20px; }
+  .team-profile { padding-top:14px; }
+}

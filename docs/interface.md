@@ -2,6 +2,10 @@
 
 [Ouvrir l’application](https://isis-gestion-stages-api.onrender.com/) · [Swagger technique](https://isis-gestion-stages-api.onrender.com/docs)
 
+Le logo ISIS fourni est conservé dans `app/web/isis-logo.jpg` ; les couleurs corail `#F46964` et violet `#804FDF` ont été relevées dans ce visuel. La couleur des boutons est assombrie pour préserver la lisibilité du texte blanc. `theme.css` rassemble les adaptations visuelles.
+
+**Comprendre le projet**, dans la barre latérale, ouvre `/guide`. Le guide propose cinq exemples HTTP explicatifs, les choix d’architecture, les preuves, une trame de soutenance à cinq et un PDF téléchargeable. Les exemples du guide ne font aucun appel au CRUD.
+
 L’interface est servie à la racine `/` par le même conteneur FastAPI que l’API. Elle ne demande ni installation, ni connexion GitHub Desktop pour être utilisée. Les vues, les indicateurs et les exports utilisent les stages réellement reçus de `/stages`. Aucun stage fictif n’est inséré automatiquement à l’ouverture.
 
 ## Les quatre vues

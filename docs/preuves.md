@@ -73,7 +73,9 @@ Les sept images ci-dessous sont des captures originales du navigateur pendant le
 
 ![Lecture après suppression sur Render : HTTP 404](../preuves/render/captures/06-swagger-get-404.jpg)
 
-## Captures à compléter depuis le PC avant remise
+## Captures complémentaires recommandées depuis le PC
+
+L’énoncé demande quelques captures de fonctionnement et de déploiement, sans imposer ces trois vues locales précises. Les captures déjà jointes et les journaux constituent des preuves disponibles ; les éléments ci-dessous renforcent la lisibilité du dossier.
 
 Le [guide Windows](guide-windows.md) donne les actions exactes dans GitHub Desktop, PowerShell, Swagger et Render. Les journaux Docker et Render sont déjà joints. Utiliser les données fictives fournies dans Swagger et conserver l’`id` renvoyé par `POST` pour enchaîner les opérations sur le même stage.
 
@@ -89,4 +91,4 @@ Dans Swagger, ouvrir une route, sélectionner **Try it out**, saisir le corps ou
 
 Les journaux montrent les statuts du contrôle complet. Pour illustrer aussi le remplacement et la suppression dans Swagger, ajouter les captures `docker/03-lecture-et-put-200.png` et `docker/04-delete-204-et-get-404.png`.
 
-Le lien du dépôt et l’URL Render sont renseignés dans le README. Avant la remise, confirmer que le dépôt privé est accessible à l’enseignante, joindre les captures restantes et indiquer le commit de remise. Le commit applicatif déployé est `ed8258ebeff0e89967831a40cf612dff315567c0` ; les ajouts ultérieurs de documentation et preuves ne modifient pas cette application lorsqu’ils utilisent `[skip render]`. Dans le tableau de bord, choisir un cadrage qui exclut les paramètres de compte et les éventuelles valeurs confidentielles.
+Le lien du dépôt et l’URL Render sont renseignés dans le README. Avant la remise, confirmer que le dépôt privé est accessible à l’enseignante et indiquer le commit de remise. `ed8258ebeff0e89967831a40cf612dff315567c0` est le déploiement API historique ; la section de chaque version conserve son propre commit. Les ajouts limités aux preuves peuvent utiliser `[skip render]`. Dans le tableau de bord, choisir un cadrage qui exclut les paramètres de compte et les éventuelles valeurs confidentielles.

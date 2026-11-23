@@ -44,7 +44,7 @@ def create_app(chemin_base: Path | None = None) -> FastAPI:
     service = FastAPI(
         title="Gestion des stages",
         description="Gérer les stages fictifs d’une école d’ingénieurs.",
-        version="1.1.0",
+        version="1.2.0",
         lifespan=duree_de_vie,
     )
 
@@ -52,6 +52,13 @@ def create_app(chemin_base: Path | None = None) -> FastAPI:
     def ouvrir_interface() -> FileResponse:
         return FileResponse(
             DOSSIER_WEB / "index.html",
+            headers={"Cache-Control": "no-cache", "X-Content-Type-Options": "nosniff"},
+        )
+
+    @service.get("/guide", include_in_schema=False, response_class=FileResponse)
+    def ouvrir_guide() -> FileResponse:
+        return FileResponse(
+            DOSSIER_WEB / "guide.html",
             headers={"Cache-Control": "no-cache", "X-Content-Type-Options": "nosniff"},
         )
 

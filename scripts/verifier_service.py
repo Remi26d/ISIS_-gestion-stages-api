@@ -46,6 +46,11 @@ def verifier_service(url: str) -> None:
         ("/assets/app.js", b"loadStages"),
         ("/assets/model.mjs", b"stageStatus"),
         ("/assets/icons.svg", b'<symbol id="cap"'),
+        ("/assets/theme.css", b"--isis-coral"),
+        ("/assets/isis-logo.jpg", b"\xff\xd8\xff"),
+        ("/guide", b'id="requestExplorer"'),
+        ("/assets/guide.js", b"requestExplorer"),
+        ("/assets/guide-soutenance.pdf", b"%PDF-"),
     ):
         contenu, _ = appeler(url, "GET", chemin, 200)
         verifier_condition(marqueur in contenu, f"Ressource de l’interface absente : {chemin}")

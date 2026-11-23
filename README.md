@@ -4,6 +4,10 @@ Application web et API REST de gestion des stages d’une école d’ingénieurs
 
 **[Ouvrir l’application web](https://isis-gestion-stages-api.onrender.com/)** · [Tester l’API dans Swagger](https://isis-gestion-stages-api.onrender.com/docs) · [Guide de l’interface](docs/interface.md)
 
+**[Comprendre le projet](https://isis-gestion-stages-api.onrender.com/guide)** · [Guide PDF de soutenance](app/web/guide-soutenance.pdf) · [Audit de l’énoncé original](docs/audit-enonce.md)
+
+La version 1.2 reprend le logo ISIS fourni sans le modifier et ses couleurs corail-violet. Le guide explique le parcours d’une requête, les choix techniques, les preuves et une répétition à cinq. Ses exemples interactifs n’écrivent aucune donnée.
+
 **ISIS Castres · FISA5 / FIA5 · 2026–2027**
 
 Module Cloud Computing, Microservices & API · Emna Trigui

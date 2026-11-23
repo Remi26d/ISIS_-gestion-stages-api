@@ -111,7 +111,7 @@ function renderDashboard() {
   $("#ringTotal").textContent = state.ready ? counts.all : "—";
   const active = counts.all ? counts.active / counts.all * 100 : 0;
   const upcoming = counts.all ? (counts.active + counts.upcoming) / counts.all * 100 : 0;
-  $("#statusRing").style.background = counts.all ? `conic-gradient(#aad3b6 0 ${active}%,#a2b2d4 ${active}% ${upcoming}%,#cebfa3 ${upcoming}% 100%)` : "#3d5b4b";
+  $("#statusRing").style.background = counts.all ? `conic-gradient(#bfa0f0 0 ${active}%,#f49b94 ${active}% ${upcoming}%,#bdb7cc ${upcoming}% 100%)` : "#524365";
   $("#statusLegend").innerHTML = ["active", "upcoming", "completed"].map((key) => `<div class="legend-row"><span class="legend-marker ${key}"></span><span>${key === "completed" ? "Terminés" : STATUS[key].label}</span><strong>${state.ready ? counts[key] : "—"}</strong></div>`).join("");
   if (!state.ready) { $("#overviewTable").innerHTML = waitingState(); $("#upcomingList").innerHTML = waitingState(); return; }
   const order = { active: 0, upcoming: 1, completed: 2 };
