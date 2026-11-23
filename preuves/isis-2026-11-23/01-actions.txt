@@ -1,0 +1,66 @@
+Extraits réels GitHub Actions - 23 novembre 2026
+Commit : c31a9aeee3262532dfec4c9832663735747c2b33
+Run : https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45181335579
+Job verifier : 137715599321 - conclusion success
+Les lignes ci-dessous proviennent du journal du job ; elles sont sélectionnées, sans reconstruction des résultats.
+
+2026-11-23T13:10:58.3311876Z Collecting coverage==7.13.5 (from coverage[toml]==7.13.5->-r requirements-dev.txt (line 5))
+2026-11-23T13:10:58.3313231Z   Using cached coverage-7.13.5-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.5 kB)
+2026-11-23T13:10:58.8757703Z Using cached coverage-7.13.5-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (254 kB)
+2026-11-23T13:10:59.0723983Z Installing collected packages: typing-extensions, ruff, pygments, pluggy, packaging, iniconfig, idna, h11, coverage, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, httpcore, anyio, starlette, pytest-cov, pydantic, httpx, fastapi
+2026-11-23T13:11:01.6309611Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 certifi-2026.10.19 click-8.4.2 coverage-7.13.5 fastapi-0.141.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 iniconfig-2.3.0 packaging-26.3 pluggy-1.6.0 pydantic-2.13.4 pydantic-core-2.46.4 pygments-2.21.0 pytest-9.0.2 pytest-cov-7.0.0 ruff-0.14.7 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.3 uvicorn-0.52.1
+2026-11-23T13:11:01.8346586Z All checks passed!
+2026-11-23T13:11:04.4854670Z ================================ tests coverage ================================
+2026-11-23T13:11:04.4855523Z _______________ coverage: platform linux, python 3.12.16-final-0 _______________
+2026-11-23T13:11:04.4858791Z app/__init__.py       0      0      0      0  100.0%
+2026-11-23T13:11:04.4859500Z app/database.py      43      0      0      0  100.0%
+2026-11-23T13:11:04.4860169Z app/main.py          66      0     10      0  100.0%
+2026-11-23T13:11:04.4860857Z app/schemas.py       32      0      6      0  100.0%
+2026-11-23T13:11:04.4862223Z TOTAL               141      0     16      0  100.0%
+2026-11-23T13:11:04.4862955Z Required test coverage of 80% reached. Total coverage: 100.00%
+2026-11-23T13:11:04.4863749Z ======================== 23 passed, 1 warning in 1.61s =========================
+2026-11-23T13:11:05.3782632Z ##[group]Run node --check app/web/app.js
+2026-11-23T13:11:05.3783040Z node --check app/web/app.js
+2026-11-23T13:11:05.3783335Z node --check app/web/model.mjs
+2026-11-23T13:11:05.3783633Z node --check app/web/guide.js
+2026-11-23T13:11:05.6018172Z ✔ Le premier et le dernier jour appartiennent au stage en cours (0.97606ms)
+2026-11-23T13:11:05.6045770Z ✔ La durée calendaire compte les bornes et les années bissextiles (0.282865ms)
+2026-11-23T13:11:05.6048699Z ✔ Les dates locales sont conservées sans conversion UTC (1.228288ms)
+2026-11-23T13:11:05.6051085Z ✔ L’avancement est borné, y compris pour un stage d’un jour (0.236799ms)
+2026-11-23T13:11:05.6052777Z ✔ La recherche combine les mots sans accents et les filtres sans modifier la source (16.52621ms)
+2026-11-23T13:11:05.6054355Z ✔ Le CSV protège les formules et conserve guillemets, accents et sauts de ligne (0.644415ms)
+2026-11-23T13:11:05.6055819Z ✔ Les valeurs utilisateur deviennent du texte dans les vues HTML (0.276933ms)
+2026-11-23T13:11:05.6133402Z ℹ tests 7
+2026-11-23T13:11:05.6136351Z ℹ suites 0
+2026-11-23T13:11:05.6137170Z ℹ pass 7
+2026-11-23T13:11:05.6138325Z ℹ fail 0
+2026-11-23T13:11:05.6138930Z ℹ cancelled 0
+2026-11-23T13:11:05.6139584Z ℹ skipped 0
+2026-11-23T13:11:05.6140217Z ℹ todo 0
+2026-11-23T13:11:05.6142902Z ℹ duration_ms 97.751058
+2026-11-23T13:11:06.9433726Z ##[group]Run docker build --tag gestion-stages-api:ci .
+2026-11-23T13:11:06.9434193Z docker build --tag gestion-stages-api:ci .
+2026-11-23T13:11:16.3623960Z ##[group]Run docker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci
+2026-11-23T13:11:16.3625477Z docker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci
+2026-11-23T13:11:17.8508774Z GET    /health            HTTP 200
+2026-11-23T13:11:17.8509666Z GET    /                  HTTP 200
+2026-11-23T13:11:17.8510513Z GET    /assets/style.css  HTTP 200
+2026-11-23T13:11:17.8515657Z GET    /assets/app.js     HTTP 200
+2026-11-23T13:11:17.8516653Z GET    /assets/model.mjs  HTTP 200
+2026-11-23T13:11:17.8517346Z GET    /assets/icons.svg  HTTP 200
+2026-11-23T13:11:17.8518076Z GET    /assets/theme.css  HTTP 200
+2026-11-23T13:11:17.8518815Z GET    /assets/isis-logo.jpg HTTP 200
+2026-11-23T13:11:17.8519535Z GET    /guide             HTTP 200
+2026-11-23T13:11:17.8520199Z GET    /assets/guide.js   HTTP 200
+2026-11-23T13:11:17.8520933Z GET    /assets/guide-soutenance.pdf HTTP 200
+2026-11-23T13:11:17.8521682Z GET    /docs              HTTP 200
+2026-11-23T13:11:17.8522342Z GET    /openapi.json      HTTP 200
+2026-11-23T13:11:17.8523045Z POST   /stages            HTTP 201
+2026-11-23T13:11:17.8523679Z GET    /stages            HTTP 200
+2026-11-23T13:11:17.8524272Z GET    /stages/1          HTTP 200
+2026-11-23T13:11:17.8524903Z PUT    /stages/1          HTTP 200
+2026-11-23T13:11:17.8525573Z GET    /stages/1          HTTP 200
+2026-11-23T13:11:17.8526421Z DELETE /stages/1          HTTP 204
+2026-11-23T13:11:17.8527247Z GET    /stages/1          HTTP 404
+2026-11-23T13:11:17.8528154Z Contrôles HTTP réussis.
+

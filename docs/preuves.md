@@ -1,5 +1,22 @@
 # Captures et preuves
 
+## Logo ISIS et guide - 23 novembre 2026
+
+Source : `c31a9aeee3262532dfec4c9832663735747c2b33`. Le déploiement Render est **Live**, la CI est réussie et le contrôle public a validé l’API ainsi que les fichiers web. Les captures distinguent la prévisualisation de la version publique.
+
+| Preuve de la version 1.2 | Contexte |
+|---|---|
+| [00-deploiement.json](../preuves/isis-2026-11-23/00-deploiement.json) | Reçu réel : commit, déploiement Live, service Docker Free, CI et résultats des vérifications. |
+| [01-actions.txt](../preuves/isis-2026-11-23/01-actions.txt) | Extraits réels du job réussi : couverture Python, tests JavaScript, image et parcours HTTP Docker avec les nouveaux fichiers. |
+| [02-interface-preview.jpg](../preuves/isis-2026-11-23/02-interface-preview.jpg) | Accueil avec le logo original, corail/violet et six exemples fictifs sur le serveur de prévisualisation. |
+| [03-guide-preview.jpg](../preuves/isis-2026-11-23/03-guide-preview.jpg) | En-tête et début du guide de compréhension en prévisualisation. |
+| [04-validation-visuelle.md](../preuves/isis-2026-11-23/04-validation-visuelle.md) | Parcours observés, largeur réduite, inspection des huit pages du PDF et vérification du téléchargement. |
+| [05-controle-public.txt](../preuves/isis-2026-11-23/05-controle-public.txt) | CRUD HTTPS réel avec suppression du stage temporaire ; égalité exacte des huit fichiers publics modifiés. |
+| [06-interface-public.jpg](../preuves/isis-2026-11-23/06-interface-public.jpg) | Tableau de bord public avec logo ISIS et six stages fictifs, répartition 2 / 2 / 2. |
+| [07-guide-public.jpg](../preuves/isis-2026-11-23/07-guide-public.jpg) | Guide réellement ouvert sur l’URL publique Render. |
+
+Les preuves du 20 novembre conservent leur contexte et leur ancienne apparence. Elles ne sont pas présentées comme des captures du nouveau thème.
+
 ## Interface web : version publique du 20 novembre 2026
 
 [Ouvrir l’application](https://isis-gestion-stages-api.onrender.com/#dashboard) · [Exécution Actions réussie du code déployé](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/44708215645)

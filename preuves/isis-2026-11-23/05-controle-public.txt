@@ -1,0 +1,33 @@
+Contrôle réel UTC 2026-11-23T13:24:51.993688+00:00
+Commit attendu c31a9aeee3262532dfec4c9832663735747c2b33
+Vérification HTTP de https://isis-gestion-stages-api.onrender.com
+GET    /health            HTTP 200
+GET    /                  HTTP 200
+GET    /assets/style.css  HTTP 200
+GET    /assets/app.js     HTTP 200
+GET    /assets/model.mjs  HTTP 200
+GET    /assets/icons.svg  HTTP 200
+GET    /assets/theme.css  HTTP 200
+GET    /assets/isis-logo.jpg HTTP 200
+GET    /guide             HTTP 200
+GET    /assets/guide.js   HTTP 200
+GET    /assets/guide-soutenance.pdf HTTP 200
+GET    /docs              HTTP 200
+GET    /openapi.json      HTTP 200
+POST   /stages            HTTP 201
+GET    /stages            HTTP 200
+GET    /stages/1          HTTP 200
+PUT    /stages/1          HTTP 200
+GET    /stages/1          HTTP 200
+DELETE /stages/1          HTTP 204
+GET    /stages/1          HTTP 404
+Contrôles HTTP réussis.
+SHA256 public identique index.html 37a2cc9116092efcd8ad797fe641f912d25820ee8ee102f25095c3b411a13380
+SHA256 public identique app.js 9b464db68649a816a32289d34e588df147a69663ea462408363d830f26144832
+SHA256 public identique theme.css c794d7b1ffdfc1a84ea63e9e2ff1754452d4f2f03bb67bca8bbb0039cc54355a
+SHA256 public identique guide.html 4790b4e0caab74e46820ed3874cf6eff5140f65f709090c862c51626f50389cf
+SHA256 public identique guide.js 40220ee13b5288dbfe02d5dab272587f1ad0ce6eaec51cd29ef28feddc1f2fff
+SHA256 public identique guide.css 76f323f52b20cba9c158b1801a638bf22e314fa812f8fd52c6f5216133a5942c
+SHA256 public identique isis-logo.jpg fbebe9ab64b647f89bbe56f66bfdcd921d2f5f86b4583fde45eab241a7f0b72a
+SHA256 public identique guide-soutenance.pdf 7854a1274030d31ab671b18a49d61c9c2889c90c17d3cc3405ee7897c1ccb74b
+Version, CRUD et fichiers publics vérifiés.

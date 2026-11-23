@@ -21,7 +21,7 @@ Le dépôt existant doit être conservé. Les mises à jour publiées à distanc
 
 Le dépôt [Remi26d/ISIS_-gestion-stages-api](https://github.com/Remi26d/ISIS_-gestion-stages-api) est publié. Les tests GitHub Actions et Docker ont réussi. Le service Docker **Free** est déployé et [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) a été testé avec création, lecture, modification, suppression et réponse `404`. Les captures publiques sont déjà dans `preuves/render/captures/`.
 
-Les étapes 1 à 6 plus bas décrivent une installation reproductible. Pour ce dépôt déjà créé, il reste seulement à récupérer les changements et à compléter les captures accessibles depuis le PC :
+Les étapes 1 à 6 plus bas décrivent une installation reproductible. Pour ce dépôt déjà créé, récupérer les changements suffit pour synchroniser le code. Les captures locales ci-dessous sont des compléments recommandés aux preuves déjà jointes : l’énoncé ne prescrit pas cette liste précise. Voir [l’audit de l’original](audit-enonce.md).
 
 1. Ouvrir **GitHub Desktop**, sélectionner `ISIS_-gestion-stages-api`, cliquer **Fetch origin**, puis **Pull origin** si ce bouton apparaît.
 2. Choisir **Repository → Show in Explorer**. Dans la barre d’adresse de ce dossier, saisir `powershell`, puis appuyer sur Entrée. La fenêtre doit être ouverte au niveau de `Dockerfile`, `app/` et `scripts/`.

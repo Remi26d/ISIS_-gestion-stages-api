@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-23",
+  "version": "1.2.0",
+  "repository": "https://github.com/Remi26d/ISIS_-gestion-stages-api",
+  "applicationCommit": "c31a9aeee3262532dfec4c9832663735747c2b33",
+  "service": {
+    "id": "srv-dc000o142hec738a2lhg",
+    "workspaceId": "tea-dbvvof2jnfac738j3860",
+    "name": "isis-gestion-stages-api",
+    "url": "https://isis-gestion-stages-api.onrender.com",
+    "runtime": "docker",
+    "plan": "free",
+    "region": "frankfurt",
+    "autoDeployTrigger": "commit",
+    "healthCheck": "TCP par défaut ; /health vérifié séparément"
+  },
+  "deploy": {
+    "commit": {
+      "createdAt": "2026-11-23T13:10:39Z",
+      "id": "c31a9aeee3262532dfec4c9832663735747c2b33",
+      "message": "Personnaliser l’interface ISIS et ajouter le guide de compréhension et de soutenance"
+    },
+    "createdAt": "2026-11-23T13:10:46.233439Z",
+    "finishedAt": "2026-11-23T13:24:52.146755Z",
+    "id": "dep-dc23mlmc6qcc73beeq60",
+    "startedAt": "2026-11-23T13:10:46.206441Z",
+    "status": "live",
+    "trigger": "new_commit",
+    "updatedAt": "2026-11-23T13:25:21.254558Z"
+  },
+  "ci": {
+    "runId": 45181335579,
+    "jobId": 137715599321,
+    "conclusion": "success",
+    "pythonTests": 23,
+    "javascriptTests": 7,
+    "pythonStatements": 141,
+    "pythonBranchExits": 16,
+    "pythonCoveragePercent": 100
+  },
+  "workload": {
+    "version": "1.2.0",
+    "httpProof": "05-controle-public.txt",
+    "crud": [
+      "POST 201",
+      "GET 200",
+      "PUT 200",
+      "DELETE 204",
+      "GET 404"
+    ],
+    "createdTestStageId": 1,
+    "testStageDeleted": true,
+    "publicAssetsComparedByteForByte": true
+  },
+  "browser": {
+    "publicDashboard": "https://isis-gestion-stages-api.onrender.com/#dashboard",
+    "publicGuide": "https://isis-gestion-stages-api.onrender.com/guide",
+    "fakeExamplesAddedExplicitly": 6,
+    "displayedCounts": {
+      "all": 6,
+      "active": 2,
+      "upcoming": 2,
+      "completed": 2
+    },
+    "publicGuideInvalidExample": "422 illustratif",
+    "publicPdfDownloadedAndCompared": true
+  },
+  "pdf": {
+    "pages": 8,
+    "sha256": "7854a1274030d31ab671b18a49d61c9c2889c90c17d3cc3405ee7897c1ccb74b"
+  },
+  "limitations": [
+    "Données fictives uniquement ; SQLite sur disque éphémère Render Free.",
+    "La couverture de 100 % concerne Python.",
+    "Largeur réduite contrôlée par zoom, sans test sur téléphone physique."
+  ]
+}
+

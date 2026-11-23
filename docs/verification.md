@@ -1,6 +1,28 @@
 # Rapport de vérification
 
-**Dernière mise à jour : 20 novembre 2026** · Python 3.12.14
+## Version 1.2 - 23 novembre 2026
+
+Le commit `c31a9aeee3262532dfec4c9832663735747c2b33` ajoute le logo ISIS original, la palette corail-violet et `/guide`, avec cinq exemples HTTP explicatifs et un PDF de huit pages. La [CI 45181335579](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45181335579) est terminée avec succès.
+
+| Contrôle de cette version | Résultat |
+|---|---|
+| Ruff | Réussi localement et dans la CI. |
+| Python / TestClient / persistance | 23 tests réussis dans la CI ; 62 sous-tests également observés localement ; couverture de 141 instructions et 16 sorties de branche : 100 % Python. |
+| JavaScript | Syntaxe des trois modules contrôlée ; les 7 tests de logique passent. |
+| PowerShell et Docker | Syntaxe vérifiée, image construite, conteneur exécuté avec PORT=10000 et parcours HTTP complet réussi dans la CI. |
+| Ressources ajoutées dans le conteneur | Logo, thème, guide, JavaScript du guide et PDF répondent 200. |
+| Parcours visuel en prévisualisation | Logo et couleurs, six exemples, navigation vers le guide, cinq cas HTTP du guide et menu compact observés. |
+| PDF | Huit pages rendues et inspectées ; téléchargement depuis le guide identique au fichier du dépôt. |
+
+Les [extraits Actions](../preuves/isis-2026-11-23/01-actions.txt) et le [compte rendu visuel](../preuves/isis-2026-11-23/04-validation-visuelle.md) précisent le contexte de chaque preuve. La couverture Python ne mesure pas toute l’interface JavaScript. Le contrôle à 340 pixels CSS a été obtenu par zoom ; ce n’est pas un test sur téléphone physique.
+
+**Render de la version 1.2 :** le déploiement `dep-dc23mlmc6qcc73beeq60` est passé à **Live le 23 novembre à 14:24:52, heure de Paris**. Le [contrôle public](../preuves/isis-2026-11-23/05-controle-public.txt) réussit le CRUD complet et vérifie l’égalité octet pour octet des huit fichiers web modifiés avec ceux du dépôt. Le stage temporaire d’id 1 a été supprimé. Le [reçu de déploiement](../preuves/isis-2026-11-23/00-deploiement.json) lie le commit, le service, la CI et les contrôles.
+
+Le navigateur public affiche le logo ISIS et six exemples ajoutés explicitement, répartis 2 / 2 / 2. Le guide public et son cas explicatif 422 ont été ouverts ; le PDF téléchargé depuis Render est identique au fichier du dépôt. Les captures publiques sont distinctes des captures de prévisualisation. Le premier démarrage de ce déploiement a pris environ quatorze minutes ; les contrôles HTTP ont attendu la disponibilité de la version 1.2. Aucun succès public n’a été déduit du seul build.
+
+## Historique du 20 novembre 2026
+
+Python 3.12.14. Les nombres et commits ci-dessous décrivent les versions historiques, pas les résultats de la version 1.2.
 
 Le service [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) fonctionne sur Render Docker **Free**, en région Francfort. Le déploiement applicatif `ed8258ebeff0e89967831a40cf612dff315567c0` est `live`. Le contrôle HTTP complet et les opérations interactives dans Swagger ont réussi. Les résultats et captures sont détaillés plus bas.
 
