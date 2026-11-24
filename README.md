@@ -1,5 +1,7 @@
 # Gestion des stages
 
+La version 1.3 ajoute une visite guidée de six étapes à la première ouverture. Le bouton **?** de la barre supérieure permet de la relancer ; **Passer** ou Échap la ferme sans modifier les stages.
+
 Application web et API REST de gestion des stages d’une école d’ingénieurs. L’interface permet de créer, consulter, modifier et supprimer des stages fictifs, rechercher les parcours, suivre les dates clés et exporter les résultats. Les stages sont stockés dans un fichier SQLite et le contrat OpenAPI reste consultable dans Swagger.
 
 **[Ouvrir l’application web](https://isis-gestion-stages-api.onrender.com/)** · [Tester l’API dans Swagger](https://isis-gestion-stages-api.onrender.com/docs) · [Guide de l’interface](docs/interface.md)

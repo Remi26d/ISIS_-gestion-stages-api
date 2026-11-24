@@ -50,6 +50,8 @@ def verifier_service(url: str) -> None:
         ("/assets/isis-logo.jpg", b"\xff\xd8\xff"),
         ("/guide", b'id="requestExplorer"'),
         ("/assets/guide.js", b"requestExplorer"),
+        ("/assets/tour.js", b"setupTour"),
+        ("/assets/tour.css", b".tour-card"),
         ("/assets/guide-soutenance.pdf", b"%PDF-"),
     ):
         contenu, _ = appeler(url, "GET", chemin, 200)

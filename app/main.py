@@ -44,7 +44,7 @@ def create_app(chemin_base: Path | None = None) -> FastAPI:
     service = FastAPI(
         title="Gestion des stages",
         description="Gérer les stages fictifs d’une école d’ingénieurs.",
-        version="1.2.0",
+        version="1.3.0",
         lifespan=duree_de_vie,
     )
 

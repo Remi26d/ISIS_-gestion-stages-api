@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.help-mark { display:grid;place-items:center;width:19px;height:19px;border:1.5px solid currentColor;border-radius:50%;font-size:13px;line-height:1;font-weight:700; }
+#startTour { color:#8050b0; }
+body.tour-open { overflow:hidden; }
+.tour-root { position:fixed;inset:0;width:100vw;height:100svh;max-width:none;max-height:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;overflow:hidden;color:#30233f;box-shadow:none; }
+.tour-root::backdrop { background:transparent;backdrop-filter:none; }
+.tour-spotlight { position:fixed;pointer-events:none;border:2px solid #d8b8ff;border-radius:12px;box-shadow:0 0 0 100vmax #24123499; }
+.tour-card { position:fixed;display:flex;flex-direction:column;width:min(370px,calc(100vw - 24px));max-height:calc(100svh - 24px);overflow:hidden;visibility:hidden;background:#fff;border:1px solid #e8dcf2;border-radius:14px;padding:24px;box-shadow:0 12px 55px #26113d40;outline:none; }
+.tour-pointer { position:fixed;width:12px;height:12px;background:#fff;border:solid #e8dcf2;transform:rotate(45deg); }
+.tour-pointer[data-placement="below"] { border-width:1px 0 0 1px; }
+.tour-pointer[data-placement="above"] { border-width:0 1px 1px 0; }
+.tour-topline { display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:15px;flex-shrink:0; }
+.tour-progress { font-size:13px;line-height:1.5;color:#815b99; }
+.tour-close { width:28px;height:28px; }
+.tour-card h2 { font-size:21px;line-height:1.3;letter-spacing:-.4px;margin:0 0 13px;font-weight:650;flex-shrink:0; }
+.tour-card p { font-size:16px;line-height:1.65;color:#735d80;margin:0 0 22px;overflow:auto;min-height:0; }
+.tour-controls { display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;flex-shrink:0; }
+.tour-controls .button { font-size:14px;min-height:40px;padding:9px 14px; }
+.tour-controls .button:disabled { cursor:default; }
+.tour-skip { border:0;background:none;font-size:14px;color:#80658f;padding:8px 0;margin-right:auto; }
+.tour-skip:hover { text-decoration:underline; }
+@media(max-width:600px){ .tour-card{padding:20px}.tour-card h2{font-size:20px}.tour-controls{gap:7px}.tour-controls .button{padding:9px 12px}.tour-skip{font-size:13px}.topbar-right{gap:7px}.topbar-right .topbar-divider{display:none}.topbar-right .connection{font-size:11px}.topbar-right .icon-button{width:30px;height:32px}.topbar-left{min-width:0}.topbar-left .breadcrumb{display:none} }
+@media(max-height:400px){.tour-card{padding:16px}.tour-card h2{font-size:18px}.tour-card p{font-size:14px;line-height:1.55;margin-bottom:15px}.tour-topline{margin-bottom:9px}.tour-controls .button{min-height:36px;padding:7px 10px}}

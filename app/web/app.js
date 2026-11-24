@@ -1,4 +1,5 @@
 import { STATUS, localISO, addDays, stageStatus, stageDuration, stageProgress, dayNumber, normalize, escapeHTML as esc, filterStages, stagesCSV } from "./model.mjs";
+import { setupTour } from "./tour.js?v=1.3";
 
 const $ = (selector) => document.querySelector(selector);
 const icon = (name, extra = "") => `<svg class="icon ${extra}" aria-hidden="true"><use href="/assets/icons.svg#${name}"/></svg>`;
@@ -435,4 +436,5 @@ window.addEventListener("online", () => { if (!document.querySelector("dialog[op
 window.matchMedia("(max-width: 800px)").addEventListener("change", closeNavigation);
 navigate(location.hash.slice(1));
 render();
-loadStages();
+const tour = setupTour({ navigate, getView: () => state.view });
+loadStages().finally(() => tour.offerFirstVisit());

@@ -20,6 +20,8 @@ class TestInterfaceWeb(TestCase):
         self.assertIn('id="stageForm"', accueil.text)
         self.assertIn('/assets/isis-logo.jpg', accueil.text)
         self.assertIn('href="/guide"', accueil.text)
+        self.assertIn('id="tourDialog"', accueil.text)
+        self.assertIn('id="startTour"', accueil.text)
         guide = self.client.get("/guide")
         self.assertEqual(guide.status_code, 200)
         self.assertIn("text/html", guide.headers["content-type"])
@@ -34,6 +36,8 @@ class TestInterfaceWeb(TestCase):
             ("theme.css", "text/css"),
             ("guide.css", "text/css"),
             ("guide.js", "javascript"),
+            ("tour.js", "javascript"),
+            ("tour.css", "text/css"),
             ("isis-logo.jpg", "image/jpeg"),
             ("guide-soutenance.pdf", "application/pdf"),
         ):
