@@ -1,0 +1,595 @@
+﻿2026-11-24T09:15:39.5345614Z Current runner version: '2.338.2'
+2026-11-24T09:15:39.5397144Z ##[group]Runner Image Provisioner
+2026-11-24T09:15:39.5403480Z Hosted Compute Agent
+2026-11-24T09:15:39.5404642Z Version: 20261111.635
+2026-11-24T09:15:39.5405944Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-24T09:15:39.5407347Z Build Date: 2026-11-11T01:49:01Z
+2026-11-24T09:15:39.5408775Z Worker ID: {715f5a48-10d2-491f-a67c-604fcf87b3a7}
+2026-11-24T09:15:39.5410137Z Region: centralus
+2026-11-24T09:15:39.5411174Z Cloud: Azure
+2026-11-24T09:15:39.5412087Z ##[endgroup]
+2026-11-24T09:15:39.5414616Z ##[group]Operating System
+2026-11-24T09:15:39.5415663Z Ubuntu
+2026-11-24T09:15:39.5416623Z 26.04.1
+2026-11-24T09:15:39.5417544Z LTS
+2026-11-24T09:15:39.5418905Z ##[endgroup]
+2026-11-24T09:15:39.5419949Z ##[group]Runner Image
+2026-11-24T09:15:39.5420996Z Image: ubuntu-26.04
+2026-11-24T09:15:39.5422016Z Version: 20261116.202.1
+2026-11-24T09:15:39.5424176Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-24T09:15:39.5449543Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-24T09:15:39.5451328Z ##[endgroup]
+2026-11-24T09:15:39.5453445Z ##[group]GITHUB_TOKEN Permissions
+2026-11-24T09:15:39.5456521Z Contents: read
+2026-11-24T09:15:39.5457640Z Metadata: read
+2026-11-24T09:15:39.5458908Z ##[endgroup]
+2026-11-24T09:15:39.5462213Z Secret source: Actions
+2026-11-24T09:15:39.5464005Z Cache mode: write
+2026-11-24T09:15:39.5465583Z Prepare workflow directory
+2026-11-24T09:15:39.6462043Z Prepare all required actions
+2026-11-24T09:15:39.6615732Z Getting action download info
+2026-11-24T09:15:39.9980569Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-24T09:15:40.0963824Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-11-24T09:15:40.1633014Z Download action repository 'actions/setup-node@v6' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-11-24T09:15:40.3463381Z Complete job name: verifier
+2026-11-24T09:15:40.4387295Z ##[group]Run actions/checkout@v6
+2026-11-24T09:15:40.4388928Z with:
+2026-11-24T09:15:40.4389779Z   repository: Remi26d/ISIS_-gestion-stages-api
+2026-11-24T09:15:40.4396939Z   token: ***
+2026-11-24T09:15:40.4397712Z   ssh-strict: true
+2026-11-24T09:15:40.4398634Z   ssh-user: git
+2026-11-24T09:15:40.4399379Z   persist-credentials: true
+2026-11-24T09:15:40.4400201Z   clean: true
+2026-11-24T09:15:40.4400902Z   sparse-checkout-cone-mode: true
+2026-11-24T09:15:40.4401823Z   fetch-depth: 1
+2026-11-24T09:15:40.4402574Z   fetch-tags: false
+2026-11-24T09:15:40.4403253Z   show-progress: true
+2026-11-24T09:15:40.4403718Z   lfs: false
+2026-11-24T09:15:40.4404138Z   submodules: false
+2026-11-24T09:15:40.4404603Z   set-safe-directory: true
+2026-11-24T09:15:40.4405123Z   allow-unsafe-pr-checkout: false
+2026-11-24T09:15:40.4406063Z ##[endgroup]
+2026-11-24T09:15:40.7572657Z Syncing repository: Remi26d/ISIS_-gestion-stages-api
+2026-11-24T09:15:40.7601205Z ##[group]Getting Git version info
+2026-11-24T09:15:40.7603343Z Working directory is '/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api'
+2026-11-24T09:15:40.7626606Z [command]/usr/bin/git version
+2026-11-24T09:15:40.7628166Z git version 2.56.1
+2026-11-24T09:15:40.7633508Z ##[endgroup]
+2026-11-24T09:15:40.7642406Z Temporarily overriding HOME='/home/runner/work/_temp/5b77bc6c-238d-4905-bce2-a41c95ea27a3' before making global git config changes
+2026-11-24T09:15:40.7645208Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T09:15:40.7653074Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api
+2026-11-24T09:15:40.7658310Z Deleting the contents of '/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api'
+2026-11-24T09:15:40.7661057Z ##[group]Determining repository object format
+2026-11-24T09:15:40.7663149Z ##[endgroup]
+2026-11-24T09:15:40.7665354Z ##[group]Initializing the repository
+2026-11-24T09:15:40.7667457Z [command]/usr/bin/git init /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api
+2026-11-24T09:15:40.7670113Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-24T09:15:40.7672268Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-24T09:15:40.7674287Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-24T09:15:40.7676023Z hint: call:
+2026-11-24T09:15:40.7676981Z hint:
+2026-11-24T09:15:40.7678333Z hint: 	git config --global init.defaultBranch <name>
+2026-11-24T09:15:40.7679871Z hint:
+2026-11-24T09:15:40.7681299Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-24T09:15:40.7683324Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-24T09:15:40.7685035Z hint:
+2026-11-24T09:15:40.7686024Z hint: 	git branch -m <name>
+2026-11-24T09:15:40.7687301Z hint:
+2026-11-24T09:15:40.7689418Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-24T09:15:40.7692355Z Initialized empty Git repository in /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git/
+2026-11-24T09:15:40.7697254Z [command]/usr/bin/git remote add origin https://github.com/Remi26d/ISIS_-gestion-stages-api
+2026-11-24T09:15:40.7746869Z ##[endgroup]
+2026-11-24T09:15:40.7748625Z ##[group]Disabling automatic garbage collection
+2026-11-24T09:15:40.7750217Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-24T09:15:40.7830332Z ##[endgroup]
+2026-11-24T09:15:40.7849621Z ##[group]Setting up auth
+2026-11-24T09:15:40.7851027Z Removing SSH command configuration
+2026-11-24T09:15:40.7861969Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T09:15:40.7867104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T09:15:40.9154711Z Removing HTTP extra header
+2026-11-24T09:15:40.9157322Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T09:15:40.9176690Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T09:15:40.9399704Z Removing includeIf entries pointing to credentials config files
+2026-11-24T09:15:40.9408196Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T09:15:40.9459183Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T09:15:40.9755039Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-24T09:15:40.9800268Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git.path /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:15:40.9838831Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:15:40.9880625Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:15:40.9918220Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:15:40.9977978Z ##[endgroup]
+2026-11-24T09:15:40.9979627Z ##[group]Fetching the repository
+2026-11-24T09:15:40.9982414Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b449de80dbc63c273cb93603e4cbec92645f859c:refs/remotes/origin/main
+2026-11-24T09:15:41.6095706Z From https://github.com/Remi26d/ISIS_-gestion-stages-api
+2026-11-24T09:15:41.6097688Z  * [new ref]         b449de80dbc63c273cb93603e4cbec92645f859c -> origin/main
+2026-11-24T09:15:41.6102944Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-24T09:15:41.6105018Z   origin/main
+2026-11-24T09:15:41.6108542Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-11-24T09:15:41.6110110Z b449de80dbc63c273cb93603e4cbec92645f859c
+2026-11-24T09:15:41.6113960Z ##[endgroup]
+2026-11-24T09:15:41.6115818Z ##[group]Determining the checkout info
+2026-11-24T09:15:41.6117886Z ##[endgroup]
+2026-11-24T09:15:41.6119391Z [command]/usr/bin/git sparse-checkout disable
+2026-11-24T09:15:41.6159089Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-24T09:15:41.6194384Z ##[group]Checking out the ref
+2026-11-24T09:15:41.6199849Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-24T09:15:41.6392973Z Switched to a new branch 'main'
+2026-11-24T09:15:41.6400469Z branch 'main' set up to track 'origin/main'.
+2026-11-24T09:15:41.6408545Z ##[endgroup]
+2026-11-24T09:15:41.6654780Z [command]/usr/bin/git log -1 --format=%H
+2026-11-24T09:15:41.6661070Z b449de80dbc63c273cb93603e4cbec92645f859c
+2026-11-24T09:15:41.7075163Z ##[group]Run actions/setup-python@v6
+2026-11-24T09:15:41.7076483Z with:
+2026-11-24T09:15:41.7077384Z   python-version: 3.12
+2026-11-24T09:15:41.7078550Z   cache: pip
+2026-11-24T09:15:41.7079860Z   cache-dependency-path: requirements.txt
+requirements-dev.txt
+
+2026-11-24T09:15:41.7081500Z   check-latest: false
+2026-11-24T09:15:41.7091506Z   token: ***
+2026-11-24T09:15:41.7092471Z   update-environment: true
+2026-11-24T09:15:41.7093591Z   allow-prereleases: false
+2026-11-24T09:15:41.7094683Z   freethreaded: false
+2026-11-24T09:15:41.7095706Z ##[endgroup]
+2026-11-24T09:15:41.8596034Z ##[group]Installed versions
+2026-11-24T09:15:41.8722400Z Successfully set up CPython (3.12.16)
+2026-11-24T09:15:41.8726176Z ##[endgroup]
+2026-11-24T09:15:41.9400157Z [command]/opt/hostedtoolcache/Python/3.12.16/x64/bin/pip cache dir
+2026-11-24T09:15:42.3950980Z /home/runner/.cache/pip
+2026-11-24T09:15:42.5777713Z Cache hit for: setup-python-Linux-x64-26.04-Ubuntu-python-3.12.16-pip-8144f0e54d237604b8a455e887c2c6168fd86d73b4d6661cea8bd67bc1f68e95
+2026-11-24T09:15:43.4093094Z Received 23858122 of 23858122 (100.0%), 33.9 MBs/sec
+2026-11-24T09:15:43.4094382Z Cache Size: ~23 MB (23858122 B)
+2026-11-24T09:15:43.4182397Z [command]/usr/bin/tar -xf /home/runner/work/_temp/382a2875-ef3b-43b0-89ed-d10ef8424902/cache.tzst -P -C /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api --use-compress-program unzstd
+2026-11-24T09:15:43.4871023Z Cache restored successfully
+2026-11-24T09:15:43.4892851Z Cache restored from key: setup-python-Linux-x64-26.04-Ubuntu-python-3.12.16-pip-8144f0e54d237604b8a455e887c2c6168fd86d73b4d6661cea8bd67bc1f68e95
+2026-11-24T09:15:43.5112247Z ##[group]Run python -m pip install --requirement requirements-dev.txt
+2026-11-24T09:15:43.5112849Z [36;1mpython -m pip install --requirement requirements-dev.txt[0m
+2026-11-24T09:15:43.5154519Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:15:43.5154801Z env:
+2026-11-24T09:15:43.5155093Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:43.5155555Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:43.5156002Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:43.5156422Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:43.5156809Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:43.5157196Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:43.5157540Z ##[endgroup]
+2026-11-24T09:15:44.1099202Z Ignoring colorama: markers 'sys_platform == "win32"' don't match your environment
+2026-11-24T09:15:44.1809606Z Collecting annotated-doc==0.0.5 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 2))
+2026-11-24T09:15:44.1823317Z   Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-11-24T09:15:44.2033102Z Collecting annotated-types==0.8.0 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 3))
+2026-11-24T09:15:44.2045176Z   Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-11-24T09:15:44.2312695Z Collecting anyio==4.14.2 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 4))
+2026-11-24T09:15:44.2324632Z   Using cached anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+2026-11-24T09:15:44.2576780Z Collecting click==8.4.2 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 5))
+2026-11-24T09:15:44.2588580Z   Using cached click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-11-24T09:15:44.3078412Z Collecting fastapi==0.141.1 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 7))
+2026-11-24T09:15:44.3090140Z   Using cached fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+2026-11-24T09:15:44.3391696Z Collecting h11==0.16.0 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 8))
+2026-11-24T09:15:44.3408890Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-24T09:15:44.3648365Z Collecting idna==3.18 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 9))
+2026-11-24T09:15:44.3662427Z   Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-11-24T09:15:44.4906100Z Collecting pydantic==2.13.4 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 10))
+2026-11-24T09:15:44.4920035Z   Using cached pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-11-24T09:15:45.1863684Z Collecting pydantic-core==2.46.4 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 11))
+2026-11-24T09:15:45.1878959Z   Using cached pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-11-24T09:15:45.2212394Z Collecting starlette==1.6.0 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 12))
+2026-11-24T09:15:45.2226831Z   Using cached starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+2026-11-24T09:15:45.2498639Z Collecting typing-extensions==4.16.0 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 13))
+2026-11-24T09:15:45.2511271Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-24T09:15:45.2725362Z Collecting typing-inspection==0.4.3 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 14))
+2026-11-24T09:15:45.2739747Z   Using cached typing_inspection-0.4.3-py3-none-any.whl.metadata (2.6 kB)
+2026-11-24T09:15:45.3045606Z Collecting uvicorn==0.52.1 (from -r /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/requirements.txt (line 15))
+2026-11-24T09:15:45.3060372Z   Using cached uvicorn-0.52.1-py3-none-any.whl.metadata (6.6 kB)
+2026-11-24T09:15:45.3380437Z Collecting certifi==2026.10.19 (from -r requirements-dev.txt (line 4))
+2026-11-24T09:15:45.3394651Z   Using cached certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+2026-11-24T09:15:45.7989735Z Collecting coverage==7.13.5 (from coverage[toml]==7.13.5->-r requirements-dev.txt (line 5))
+2026-11-24T09:15:45.8005195Z   Using cached coverage-7.13.5-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.5 kB)
+2026-11-24T09:15:45.8255473Z Collecting httpcore==1.0.9 (from -r requirements-dev.txt (line 6))
+2026-11-24T09:15:45.8268519Z   Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-11-24T09:15:45.8547957Z Collecting httpx==0.28.1 (from -r requirements-dev.txt (line 7))
+2026-11-24T09:15:45.8560870Z   Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-11-24T09:15:45.8768646Z Collecting iniconfig==2.3.0 (from -r requirements-dev.txt (line 8))
+2026-11-24T09:15:45.8781288Z   Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-24T09:15:45.9031682Z Collecting packaging==26.3 (from -r requirements-dev.txt (line 9))
+2026-11-24T09:15:45.9044532Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-24T09:15:45.9269111Z Collecting pluggy==1.6.0 (from -r requirements-dev.txt (line 10))
+2026-11-24T09:15:45.9274646Z   Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-11-24T09:15:45.9528221Z Collecting pygments==2.21.0 (from -r requirements-dev.txt (line 11))
+2026-11-24T09:15:45.9541024Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-24T09:15:45.9881414Z Collecting pytest==9.0.2 (from -r requirements-dev.txt (line 12))
+2026-11-24T09:15:45.9893552Z   Using cached pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+2026-11-24T09:15:46.0131171Z Collecting pytest-cov==7.0.0 (from -r requirements-dev.txt (line 13))
+2026-11-24T09:15:46.0143867Z   Using cached pytest_cov-7.0.0-py3-none-any.whl.metadata (31 kB)
+2026-11-24T09:15:46.3601603Z Collecting ruff==0.14.7 (from -r requirements-dev.txt (line 14))
+2026-11-24T09:15:46.3616914Z   Using cached ruff-0.14.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+2026-11-24T09:15:46.3926779Z Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-11-24T09:15:46.3939948Z Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-11-24T09:15:46.3952325Z Using cached anyio-4.14.2-py3-none-any.whl (125 kB)
+2026-11-24T09:15:46.3965053Z Using cached click-8.4.2-py3-none-any.whl (119 kB)
+2026-11-24T09:15:46.3977544Z Using cached fastapi-0.141.1-py3-none-any.whl (131 kB)
+2026-11-24T09:15:46.3990253Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-24T09:15:46.4002752Z Using cached idna-3.18-py3-none-any.whl (65 kB)
+2026-11-24T09:15:46.4015238Z Using cached pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-11-24T09:15:46.4029016Z Using cached pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-11-24T09:15:46.4048610Z Using cached starlette-1.6.0-py3-none-any.whl (75 kB)
+2026-11-24T09:15:46.4061182Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-24T09:15:46.4073517Z Using cached typing_inspection-0.4.3-py3-none-any.whl (14 kB)
+2026-11-24T09:15:46.4085895Z Using cached uvicorn-0.52.1-py3-none-any.whl (79 kB)
+2026-11-24T09:15:46.4098789Z Using cached certifi-2026.10.19-py3-none-any.whl (136 kB)
+2026-11-24T09:15:46.4111701Z Using cached coverage-7.13.5-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (254 kB)
+2026-11-24T09:15:46.4124696Z Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-11-24T09:15:46.4136999Z Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-11-24T09:15:46.4150267Z Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-11-24T09:15:46.4162435Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-24T09:15:46.4174913Z Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-11-24T09:15:46.4187244Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-24T09:15:46.4203726Z Using cached pytest-9.0.2-py3-none-any.whl (374 kB)
+2026-11-24T09:15:46.4216819Z Using cached pytest_cov-7.0.0-py3-none-any.whl (22 kB)
+2026-11-24T09:15:46.4229315Z Using cached ruff-0.14.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.1 MB)
+2026-11-24T09:15:46.5916578Z Installing collected packages: typing-extensions, ruff, pygments, pluggy, packaging, iniconfig, idna, h11, coverage, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, httpcore, anyio, starlette, pytest-cov, pydantic, httpx, fastapi
+2026-11-24T09:15:49.0008837Z 
+2026-11-24T09:15:49.0027484Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 certifi-2026.10.19 click-8.4.2 coverage-7.13.5 fastapi-0.141.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 iniconfig-2.3.0 packaging-26.3 pluggy-1.6.0 pydantic-2.13.4 pydantic-core-2.46.4 pygments-2.21.0 pytest-9.0.2 pytest-cov-7.0.0 ruff-0.14.7 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.3 uvicorn-0.52.1
+2026-11-24T09:15:49.1196961Z ##[group]Run ruff check app tests scripts
+2026-11-24T09:15:49.1197341Z [36;1mruff check app tests scripts[0m
+2026-11-24T09:15:49.1232480Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:15:49.1232735Z env:
+2026-11-24T09:15:49.1233011Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1233481Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:49.1233919Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1234310Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1234713Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1235142Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:49.1235471Z ##[endgroup]
+2026-11-24T09:15:49.1381398Z All checks passed!
+2026-11-24T09:15:49.1433879Z ##[group]Run python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=80
+2026-11-24T09:15:49.1434518Z [36;1mpython -m pytest --cov=app --cov-report=term-missing --cov-fail-under=80[0m
+2026-11-24T09:15:49.1466936Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:15:49.1467186Z env:
+2026-11-24T09:15:49.1467466Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1467925Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:49.1468671Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1469078Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1469482Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:49.1469921Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:49.1470249Z ##[endgroup]
+2026-11-24T09:15:50.7853420Z ============================= test session starts ==============================
+2026-11-24T09:15:50.7854595Z platform linux -- Python 3.12.16, pytest-9.0.2, pluggy-1.6.0
+2026-11-24T09:15:50.7855974Z rootdir: /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api
+2026-11-24T09:15:50.7863067Z configfile: pyproject.toml
+2026-11-24T09:15:50.7863808Z testpaths: tests
+2026-11-24T09:15:50.7864499Z plugins: cov-7.0.0, anyio-4.14.2
+2026-11-24T09:15:50.7865165Z collected 23 items
+2026-11-24T09:15:50.7865597Z 
+2026-11-24T09:15:50.7997083Z tests/test_schemas.py ......                                             [ 26%]
+2026-11-24T09:15:51.4120435Z tests/test_stages.py ...............                                     [ 91%]
+2026-11-24T09:15:51.6019440Z tests/test_web.py ..                                                     [100%]
+2026-11-24T09:15:51.6020044Z 
+2026-11-24T09:15:51.6028920Z =============================== warnings summary ===============================
+2026-11-24T09:15:51.6030146Z ../../../../../opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+2026-11-24T09:15:51.6032365Z   /opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-11-24T09:15:51.6034248Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-11-24T09:15:51.6041510Z 
+2026-11-24T09:15:51.6042057Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-24T09:15:51.6042954Z ================================ tests coverage ================================
+2026-11-24T09:15:51.6043863Z _______________ coverage: platform linux, python 3.12.16-final-0 _______________
+2026-11-24T09:15:51.6044473Z 
+2026-11-24T09:15:51.6044912Z Name              Stmts   Miss Branch BrPart   Cover   Missing
+2026-11-24T09:15:51.6046112Z --------------------------------------------------------------
+2026-11-24T09:15:51.6046839Z app/__init__.py       0      0      0      0  100.0%
+2026-11-24T09:15:51.6047513Z app/database.py      43      0      0      0  100.0%
+2026-11-24T09:15:51.6048433Z app/main.py          66      0     10      0  100.0%
+2026-11-24T09:15:51.6049060Z app/schemas.py       32      0      6      0  100.0%
+2026-11-24T09:15:51.6049749Z --------------------------------------------------------------
+2026-11-24T09:15:51.6050396Z TOTAL               141      0     16      0  100.0%
+2026-11-24T09:15:51.6051139Z Required test coverage of 80% reached. Total coverage: 100.00%
+2026-11-24T09:15:51.6051905Z ======================== 23 passed, 1 warning in 1.56s =========================
+2026-11-24T09:15:51.6858705Z ##[group]Run actions/setup-node@v6
+2026-11-24T09:15:51.6859034Z with:
+2026-11-24T09:15:51.6859237Z   node-version: 24
+2026-11-24T09:15:51.6859453Z   check-latest: false
+2026-11-24T09:15:51.6861804Z   token: ***
+2026-11-24T09:15:51.6862030Z   package-manager-cache: true
+2026-11-24T09:15:51.6862275Z env:
+2026-11-24T09:15:51.6862541Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:51.6862972Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:51.6863397Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:51.6863777Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:51.6864160Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:51.6864547Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:51.6864878Z ##[endgroup]
+2026-11-24T09:15:51.8409068Z Found in cache @ /opt/hostedtoolcache/node/24.22.3/x64
+2026-11-24T09:15:51.8410350Z ##[group]Environment details
+2026-11-24T09:15:52.4139082Z node: v24.22.3
+2026-11-24T09:15:52.4149018Z npm: 11.19.1
+2026-11-24T09:15:52.4149578Z yarn: 1.22.22
+2026-11-24T09:15:52.4150674Z ##[endgroup]
+2026-11-24T09:15:52.4272250Z ##[group]Run node --check app/web/app.js
+2026-11-24T09:15:52.4272627Z [36;1mnode --check app/web/app.js[0m
+2026-11-24T09:15:52.4272929Z [36;1mnode --check app/web/model.mjs[0m
+2026-11-24T09:15:52.4273230Z [36;1mnode --check app/web/guide.js[0m
+2026-11-24T09:15:52.4273516Z [36;1mnode --check app/web/tour.js[0m
+2026-11-24T09:15:52.4273819Z [36;1mnode --test tests/test_web_logic.mjs[0m
+2026-11-24T09:15:52.4313421Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:15:52.4313680Z env:
+2026-11-24T09:15:52.4313955Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.4314419Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:52.4314848Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.4315265Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.4315659Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.4316091Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:52.4316440Z ##[endgroup]
+2026-11-24T09:15:52.6773046Z ✔ Le premier et le dernier jour appartiennent au stage en cours (2.267304ms)
+2026-11-24T09:15:52.6781015Z ✔ La durée calendaire compte les bornes et les années bissextiles (0.346105ms)
+2026-11-24T09:15:52.6781943Z ✔ Les dates locales sont conservées sans conversion UTC (1.89507ms)
+2026-11-24T09:15:52.6813397Z ✔ L’avancement est borné, y compris pour un stage d’un jour (0.3648ms)
+2026-11-24T09:15:52.6814543Z ✔ La recherche combine les mots sans accents et les filtres sans modifier la source (23.123217ms)
+2026-11-24T09:15:52.6815608Z ✔ Le CSV protège les formules et conserve guillemets, accents et sauts de ligne (0.721555ms)
+2026-11-24T09:15:52.6824172Z ✔ Les valeurs utilisateur deviennent du texte dans les vues HTML (0.353659ms)
+2026-11-24T09:15:52.6948472Z ℹ tests 7
+2026-11-24T09:15:52.6949487Z ℹ suites 0
+2026-11-24T09:15:52.6950274Z ℹ pass 7
+2026-11-24T09:15:52.6951014Z ℹ fail 0
+2026-11-24T09:15:52.6952219Z ℹ cancelled 0
+2026-11-24T09:15:52.6952907Z ℹ skipped 0
+2026-11-24T09:15:52.6953546Z ℹ todo 0
+2026-11-24T09:15:52.6954264Z ℹ duration_ms 114.970066
+2026-11-24T09:15:52.7042243Z ##[group]Run $jetons = $null
+2026-11-24T09:15:52.7042564Z [36;1m$jetons = $null[0m
+2026-11-24T09:15:52.7042805Z [36;1m$erreurs = $null[0m
+2026-11-24T09:15:52.7043168Z [36;1m[void][System.Management.Automation.Language.Parser]::ParseFile([0m
+2026-11-24T09:15:52.7043748Z [36;1m  (Join-Path $PWD 'scripts/verifier-windows.ps1'), [ref]$jetons, [ref]$erreurs[0m
+2026-11-24T09:15:52.7044189Z [36;1m)[0m
+2026-11-24T09:15:52.7044443Z [36;1mif ($erreurs) { throw ($erreurs -join "`n") }[0m
+2026-11-24T09:15:52.7084006Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-11-24T09:15:52.7084302Z env:
+2026-11-24T09:15:52.7084576Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.7085029Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:52.7085470Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.7085883Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.7086331Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:52.7086716Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:52.7087039Z ##[endgroup]
+2026-11-24T09:15:53.9543828Z ##[group]Run docker build --tag gestion-stages-api:ci .
+2026-11-24T09:15:53.9544291Z [36;1mdocker build --tag gestion-stages-api:ci .[0m
+2026-11-24T09:15:53.9578731Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:15:53.9578987Z env:
+2026-11-24T09:15:53.9579257Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:53.9579711Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:15:53.9580146Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:53.9580544Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:53.9580933Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:15:53.9581340Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:15:53.9581665Z ##[endgroup]
+2026-11-24T09:15:54.5137324Z #0 building with "default" instance using docker driver
+2026-11-24T09:15:54.5139749Z 
+2026-11-24T09:15:54.5149335Z #1 [internal] load build definition from Dockerfile
+2026-11-24T09:15:54.5150383Z #1 transferring dockerfile: 493B done
+2026-11-24T09:15:54.5151357Z #1 DONE 0.0s
+2026-11-24T09:15:54.5154488Z 
+2026-11-24T09:15:54.5155266Z #2 [auth] library/python:pull token for registry-1.docker.io
+2026-11-24T09:15:54.6634263Z #2 DONE 0.0s
+2026-11-24T09:15:54.6634550Z 
+2026-11-24T09:15:54.6635245Z #3 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+2026-11-24T09:15:55.0368474Z #3 DONE 0.7s
+2026-11-24T09:15:55.1719307Z 
+2026-11-24T09:15:55.1723445Z #4 [internal] load .dockerignore
+2026-11-24T09:15:55.1725830Z #4 transferring context: 294B done
+2026-11-24T09:15:55.1736696Z #4 DONE 0.0s
+2026-11-24T09:15:55.1737345Z 
+2026-11-24T09:15:55.1738482Z #5 [internal] load build context
+2026-11-24T09:15:55.1741847Z #5 transferring context: 253.97kB 0.0s done
+2026-11-24T09:15:55.1742673Z #5 DONE 0.0s
+2026-11-24T09:15:55.1743693Z 
+2026-11-24T09:15:55.1745740Z #6 [1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:b1233897230b2046795042a642dc2a1849774c60469bb57d1a90622b501443a0
+2026-11-24T09:15:55.1748659Z #6 resolve docker.io/library/python:3.12-slim-bookworm@sha256:b1233897230b2046795042a642dc2a1849774c60469bb57d1a90622b501443a0 0.0s done
+2026-11-24T09:15:55.1751095Z #6 sha256:700042941e8d4889ec9caa986c482ca1b8a4f738fba14472a8af8f7f178ea8cf 248B / 248B 0.1s done
+2026-11-24T09:15:55.2722487Z #6 sha256:35c1cb66845b3aef2b1ae2be2e19f9dac3d5f1e270939a83ced7cb1824b99e8f 0B / 13.68MB 0.2s
+2026-11-24T09:15:55.2726206Z #6 sha256:38f2d47d8c02a8b2c0f46dc00c861a3b89c027ec20b2e590d3450602712e0c21 2.10MB / 3.34MB 0.2s
+2026-11-24T09:15:55.2727965Z #6 sha256:b1dd3d113aab1041fd80cc61d9db7ffbc058f756bf46fc149a0d9aa8b85935f4 0B / 28.25MB 0.2s
+2026-11-24T09:15:55.3858450Z #6 sha256:35c1cb66845b3aef2b1ae2be2e19f9dac3d5f1e270939a83ced7cb1824b99e8f 13.68MB / 13.68MB 0.3s done
+2026-11-24T09:15:55.3864462Z #6 sha256:38f2d47d8c02a8b2c0f46dc00c861a3b89c027ec20b2e590d3450602712e0c21 3.34MB / 3.34MB 0.2s done
+2026-11-24T09:15:55.6194894Z #6 sha256:b1dd3d113aab1041fd80cc61d9db7ffbc058f756bf46fc149a0d9aa8b85935f4 28.25MB / 28.25MB 0.3s done
+2026-11-24T09:15:55.6196389Z #6 extracting sha256:b1dd3d113aab1041fd80cc61d9db7ffbc058f756bf46fc149a0d9aa8b85935f4
+2026-11-24T09:15:56.3578590Z #6 extracting sha256:b1dd3d113aab1041fd80cc61d9db7ffbc058f756bf46fc149a0d9aa8b85935f4 0.9s done
+2026-11-24T09:15:56.3579529Z #6 DONE 1.3s
+2026-11-24T09:15:56.4689995Z 
+2026-11-24T09:15:56.4692000Z #6 [1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:b1233897230b2046795042a642dc2a1849774c60469bb57d1a90622b501443a0
+2026-11-24T09:15:56.4693664Z #6 extracting sha256:38f2d47d8c02a8b2c0f46dc00c861a3b89c027ec20b2e590d3450602712e0c21 0.1s done
+2026-11-24T09:15:56.4694569Z #6 DONE 1.4s
+2026-11-24T09:15:56.6195793Z 
+2026-11-24T09:15:56.6197710Z #6 [1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:b1233897230b2046795042a642dc2a1849774c60469bb57d1a90622b501443a0
+2026-11-24T09:15:56.6199985Z #6 extracting sha256:35c1cb66845b3aef2b1ae2be2e19f9dac3d5f1e270939a83ced7cb1824b99e8f
+2026-11-24T09:15:56.9053955Z #6 extracting sha256:35c1cb66845b3aef2b1ae2be2e19f9dac3d5f1e270939a83ced7cb1824b99e8f 0.4s done
+2026-11-24T09:15:56.9055369Z #6 DONE 1.8s
+2026-11-24T09:15:57.0092433Z 
+2026-11-24T09:15:57.0093910Z #6 [1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:b1233897230b2046795042a642dc2a1849774c60469bb57d1a90622b501443a0
+2026-11-24T09:15:57.0097863Z #6 extracting sha256:700042941e8d4889ec9caa986c482ca1b8a4f738fba14472a8af8f7f178ea8cf 0.1s done
+2026-11-24T09:15:57.0100642Z #6 DONE 1.9s
+2026-11-24T09:15:57.1609623Z 
+2026-11-24T09:15:57.1611077Z #7 [2/5] WORKDIR /app
+2026-11-24T09:15:57.7098594Z #7 DONE 0.7s
+2026-11-24T09:15:57.8863422Z 
+2026-11-24T09:15:57.8864172Z #8 [3/5] COPY requirements.txt ./
+2026-11-24T09:15:57.8864997Z #8 DONE 0.0s
+2026-11-24T09:15:57.8873755Z 
+2026-11-24T09:15:57.8874907Z #9 [4/5] RUN python -m pip install --no-cache-dir --requirement requirements.txt     && mkdir -p /app/data     && chown 10001:10001 /app/data
+2026-11-24T09:15:59.1699112Z #9 1.433 Ignoring colorama: markers 'sys_platform == "win32"' don't match your environment
+2026-11-24T09:15:59.3242795Z #9 1.522 Collecting annotated-doc==0.0.5 (from -r requirements.txt (line 2))
+2026-11-24T09:15:59.3244196Z #9 1.588   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-11-24T09:15:59.4287577Z #9 1.607 Collecting annotated-types==0.8.0 (from -r requirements.txt (line 3))
+2026-11-24T09:15:59.4289060Z #9 1.618   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-11-24T09:15:59.4290333Z #9 1.653 Collecting anyio==4.14.2 (from -r requirements.txt (line 4))
+2026-11-24T09:15:59.4291371Z #9 1.664   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+2026-11-24T09:15:59.4292394Z #9 1.693 Collecting click==8.4.2 (from -r requirements.txt (line 5))
+2026-11-24T09:15:59.5334821Z #9 1.704   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-11-24T09:15:59.5335655Z #9 1.786 Collecting fastapi==0.141.1 (from -r requirements.txt (line 7))
+2026-11-24T09:15:59.5336297Z #9 1.798   Downloading fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+2026-11-24T09:15:59.7346746Z #9 1.825 Collecting h11==0.16.0 (from -r requirements.txt (line 8))
+2026-11-24T09:15:59.7348278Z #9 1.835   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-24T09:15:59.7349531Z #9 1.856 Collecting idna==3.18 (from -r requirements.txt (line 9))
+2026-11-24T09:15:59.7350699Z #9 1.867   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-11-24T09:15:59.7351279Z #9 1.999 Collecting pydantic==2.13.4 (from -r requirements.txt (line 10))
+2026-11-24T09:15:59.8960773Z #9 2.010   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-11-24T09:16:00.4168737Z #9 2.681 Collecting pydantic-core==2.46.4 (from -r requirements.txt (line 11))
+2026-11-24T09:16:00.5301586Z #9 2.692   Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-11-24T09:16:00.5303820Z #9 2.728 Collecting starlette==1.6.0 (from -r requirements.txt (line 12))
+2026-11-24T09:16:00.5309221Z #9 2.740   Downloading starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+2026-11-24T09:16:00.5310985Z #9 2.765 Collecting typing-extensions==4.16.0 (from -r requirements.txt (line 13))
+2026-11-24T09:16:00.5312376Z #9 2.776   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-24T09:16:00.5313722Z #9 2.794 Collecting typing-inspection==0.4.3 (from -r requirements.txt (line 14))
+2026-11-24T09:16:00.6582722Z #9 2.805   Downloading typing_inspection-0.4.3-py3-none-any.whl.metadata (2.6 kB)
+2026-11-24T09:16:00.6585012Z #9 2.840 Collecting uvicorn==0.52.1 (from -r requirements.txt (line 15))
+2026-11-24T09:16:00.6586495Z #9 2.851   Downloading uvicorn-0.52.1-py3-none-any.whl.metadata (6.6 kB)
+2026-11-24T09:16:00.6587390Z #9 2.922 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-11-24T09:16:00.7699733Z #9 2.933 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-11-24T09:16:00.7701232Z #9 2.945 Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+2026-11-24T09:16:00.7702092Z #9 2.958 Downloading click-8.4.2-py3-none-any.whl (119 kB)
+2026-11-24T09:16:00.7702932Z #9 2.969 Downloading fastapi-0.141.1-py3-none-any.whl (131 kB)
+2026-11-24T09:16:00.7703728Z #9 2.981 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-24T09:16:00.7704516Z #9 2.992 Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-11-24T09:16:00.7705345Z #9 3.007 Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-11-24T09:16:00.7706556Z #9 3.030 Downloading pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-11-24T09:16:00.8990222Z #9 3.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 128.0 MB/s eta 0:00:00
+2026-11-24T09:16:00.9014190Z #9 3.069 Downloading starlette-1.6.0-py3-none-any.whl (75 kB)
+2026-11-24T09:16:00.9015943Z #9 3.080 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-24T09:16:00.9033681Z #9 3.091 Downloading typing_inspection-0.4.3-py3-none-any.whl (14 kB)
+2026-11-24T09:16:00.9035026Z #9 3.103 Downloading uvicorn-0.52.1-py3-none-any.whl (79 kB)
+2026-11-24T09:16:00.9047788Z #9 3.163 Installing collected packages: typing-extensions, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, pydantic-core, anyio, starlette, pydantic, fastapi
+2026-11-24T09:16:01.9803367Z #9 4.243 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 click-8.4.2 fastapi-0.141.1 h11-0.16.0 idna-3.18 pydantic-2.13.4 pydantic-core-2.46.4 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.3 uvicorn-0.52.1
+2026-11-24T09:16:02.1214778Z #9 4.244 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-24T09:16:02.1217387Z #9 4.385 
+2026-11-24T09:16:02.1220942Z #9 4.385 [notice] A new release of pip is available: 25.0.1 -> 26.3
+2026-11-24T09:16:02.1222401Z #9 4.385 [notice] To update, run: pip install --upgrade pip
+2026-11-24T09:16:02.3120447Z #9 DONE 4.6s
+2026-11-24T09:16:02.5159027Z 
+2026-11-24T09:16:02.5169477Z #10 [5/5] COPY app/ ./app/
+2026-11-24T09:16:02.5179963Z #10 DONE 0.0s
+2026-11-24T09:16:02.5180443Z 
+2026-11-24T09:16:02.5180808Z #11 exporting to image
+2026-11-24T09:16:02.5181468Z #11 exporting layers
+2026-11-24T09:16:02.9923421Z #11 exporting layers 0.6s done
+2026-11-24T09:16:03.1699538Z #11 exporting manifest sha256:4a5cdb9c9ff77d565bbb9d056cf7812e65aae004489751f32f82acf6caa61e53 done
+2026-11-24T09:16:03.1712248Z #11 exporting config sha256:97fc2ae0378cef09b649903e66e3c38ad24e152de7bd45ad6c7354c14a3caf1a done
+2026-11-24T09:16:03.1715533Z #11 exporting attestation manifest sha256:c3388b1e87ca53954d0fd3667dc0b68b549e4d0c6a0f5d747667aa4f06cc2e42 done
+2026-11-24T09:16:03.1718982Z #11 exporting manifest list sha256:ac4ce48929103e32398f43e259938a843f274cfa47e54040c846bc67e83ff440 done
+2026-11-24T09:16:03.1721386Z #11 naming to docker.io/library/gestion-stages-api:ci done
+2026-11-24T09:16:03.1723651Z #11 unpacking to docker.io/library/gestion-stages-api:ci
+2026-11-24T09:16:03.2365285Z #11 unpacking to docker.io/library/gestion-stages-api:ci 0.2s done
+2026-11-24T09:16:03.3110349Z #11 DONE 0.9s
+2026-11-24T09:16:03.3264237Z ##[group]Run docker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci
+2026-11-24T09:16:03.3265879Z [36;1mdocker run --detach --name gestion-stages-ci --env PORT=10000 --publish 127.0.0.1:8000:10000 gestion-stages-api:ci[0m
+2026-11-24T09:16:03.3267710Z [36;1mcurl --fail --silent --show-error --retry 20 --retry-all-errors --retry-delay 1 --retry-max-time 60 --connect-timeout 2 --max-time 5 http://127.0.0.1:8000/health[0m
+2026-11-24T09:16:03.3269465Z [36;1mpython scripts/verifier_service.py http://127.0.0.1:8000[0m
+2026-11-24T09:16:03.3307828Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:16:03.3308358Z env:
+2026-11-24T09:16:03.3308650Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:03.3309120Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:16:03.3309559Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:03.3309992Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:03.3310389Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:03.3310780Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:16:03.3311112Z ##[endgroup]
+2026-11-24T09:16:03.4224923Z 4bac3a03183cc75c92df045b8399ea1ea51deff5982a96f9e1abbcc9e63fe080
+2026-11-24T09:16:03.6426484Z curl: (56) Recv failure: Connection reset by peer
+2026-11-24T09:16:04.7765069Z {"status":"ok"}Vérification HTTP de http://127.0.0.1:8000
+2026-11-24T09:16:04.7766138Z GET    /health            HTTP 200
+2026-11-24T09:16:04.7766943Z GET    /                  HTTP 200
+2026-11-24T09:16:04.7767609Z GET    /assets/style.css  HTTP 200
+2026-11-24T09:16:04.7768498Z GET    /assets/app.js     HTTP 200
+2026-11-24T09:16:04.7769169Z GET    /assets/model.mjs  HTTP 200
+2026-11-24T09:16:04.7769804Z GET    /assets/icons.svg  HTTP 200
+2026-11-24T09:16:04.7770429Z GET    /assets/theme.css  HTTP 200
+2026-11-24T09:16:04.7771119Z GET    /assets/isis-logo.jpg HTTP 200
+2026-11-24T09:16:04.7771785Z GET    /guide             HTTP 200
+2026-11-24T09:16:04.7772418Z GET    /assets/guide.js   HTTP 200
+2026-11-24T09:16:04.7773065Z GET    /assets/tour.js    HTTP 200
+2026-11-24T09:16:04.7773700Z GET    /assets/tour.css   HTTP 200
+2026-11-24T09:16:04.7774389Z GET    /assets/guide-soutenance.pdf HTTP 200
+2026-11-24T09:16:04.7775080Z GET    /docs              HTTP 200
+2026-11-24T09:16:04.7775697Z GET    /openapi.json      HTTP 200
+2026-11-24T09:16:04.7776342Z POST   /stages            HTTP 201
+2026-11-24T09:16:04.7776981Z GET    /stages            HTTP 200
+2026-11-24T09:16:04.7777588Z GET    /stages/1          HTTP 200
+2026-11-24T09:16:04.7778451Z PUT    /stages/1          HTTP 200
+2026-11-24T09:16:04.7779102Z GET    /stages/1          HTTP 200
+2026-11-24T09:16:04.7779766Z DELETE /stages/1          HTTP 204
+2026-11-24T09:16:04.7780416Z GET    /stages/1          HTTP 404
+2026-11-24T09:16:04.7781162Z Contrôles HTTP réussis.
+2026-11-24T09:16:04.7913747Z ##[group]Run if docker container inspect gestion-stages-ci > /dev/null 2>&1; then
+2026-11-24T09:16:04.7914352Z [36;1mif docker container inspect gestion-stages-ci > /dev/null 2>&1; then[0m
+2026-11-24T09:16:04.7914778Z [36;1m  docker logs gestion-stages-ci[0m
+2026-11-24T09:16:04.7915088Z [36;1m  docker rm --force gestion-stages-ci[0m
+2026-11-24T09:16:04.7915586Z [36;1mfi[0m
+2026-11-24T09:16:04.7948919Z shell: /usr/bin/bash -e {0}
+2026-11-24T09:16:04.7949407Z env:
+2026-11-24T09:16:04.7949795Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:04.7950332Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+2026-11-24T09:16:04.7950958Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:04.7951485Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:04.7951994Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+2026-11-24T09:16:04.7952586Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+2026-11-24T09:16:04.7953064Z ##[endgroup]
+2026-11-24T09:16:04.8349283Z INFO:     Started server process [1]
+2026-11-24T09:16:04.8350469Z INFO:     172.17.0.1:40322 - "GET /health HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8351383Z INFO:     172.17.0.1:40336 - "GET /health HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8352697Z INFO:     Waiting for application startup.
+2026-11-24T09:16:04.8353494Z INFO:     172.17.0.1:40338 - "GET / HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8354684Z INFO:     172.17.0.1:40348 - "GET /assets/style.css HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8355714Z INFO:     Application startup complete.
+2026-11-24T09:16:04.8357076Z INFO:     172.17.0.1:40352 - "GET /assets/app.js HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8359016Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2026-11-24T09:16:04.8360401Z INFO:     172.17.0.1:40362 - "GET /assets/model.mjs HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8361329Z INFO:     172.17.0.1:40374 - "GET /assets/icons.svg HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8362215Z INFO:     172.17.0.1:40376 - "GET /assets/theme.css HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8363102Z INFO:     172.17.0.1:40384 - "GET /assets/isis-logo.jpg HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8363936Z INFO:     172.17.0.1:40400 - "GET /guide HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8364768Z INFO:     172.17.0.1:40402 - "GET /assets/guide.js HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8365648Z INFO:     172.17.0.1:40412 - "GET /assets/tour.js HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8366503Z INFO:     172.17.0.1:40416 - "GET /assets/tour.css HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8367465Z INFO:     172.17.0.1:40430 - "GET /assets/guide-soutenance.pdf HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8368504Z INFO:     172.17.0.1:40438 - "GET /docs HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8369280Z INFO:     172.17.0.1:40440 - "GET /openapi.json HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8370083Z INFO:     172.17.0.1:40442 - "POST /stages HTTP/1.1" 201 Created
+2026-11-24T09:16:04.8370867Z INFO:     172.17.0.1:40452 - "GET /stages HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8371638Z INFO:     172.17.0.1:40462 - "GET /stages/1 HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8372391Z INFO:     172.17.0.1:40478 - "PUT /stages/1 HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8373199Z INFO:     172.17.0.1:40490 - "GET /stages/1 HTTP/1.1" 200 OK
+2026-11-24T09:16:04.8374026Z INFO:     172.17.0.1:40504 - "DELETE /stages/1 HTTP/1.1" 204 No Content
+2026-11-24T09:16:04.8374888Z INFO:     172.17.0.1:40510 - "GET /stages/1 HTTP/1.1" 404 Not Found
+2026-11-24T09:16:04.9973257Z gestion-stages-ci
+2026-11-24T09:16:05.0077025Z Post job cleanup.
+2026-11-24T09:16:05.1645257Z Post job cleanup.
+2026-11-24T09:16:05.3860572Z Cache hit occurred on the primary key setup-python-Linux-x64-26.04-Ubuntu-python-3.12.16-pip-8144f0e54d237604b8a455e887c2c6168fd86d73b4d6661cea8bd67bc1f68e95, not saving cache.
+2026-11-24T09:16:05.4034200Z Post job cleanup.
+2026-11-24T09:16:05.5019104Z [command]/usr/bin/git version
+2026-11-24T09:16:05.5115208Z git version 2.56.1
+2026-11-24T09:16:05.5229192Z Temporarily overriding HOME='/home/runner/work/_temp/98bc7f21-f0b4-451f-a1dd-0a3c7a12379f' before making global git config changes
+2026-11-24T09:16:05.5249187Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T09:16:05.5261582Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api
+2026-11-24T09:16:05.5362358Z Removing SSH command configuration
+2026-11-24T09:16:05.5369004Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T09:16:05.5459838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-24T09:16:05.6208980Z Removing HTTP extra header
+2026-11-24T09:16:05.6229460Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T09:16:05.6350550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-24T09:16:05.6925885Z Removing includeIf entries pointing to credentials config files
+2026-11-24T09:16:05.6949168Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T09:16:05.6951107Z includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git.path
+2026-11-24T09:16:05.6969423Z includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git/worktrees/*.path
+2026-11-24T09:16:05.6988872Z includeif.gitdir:/github/workspace/.git.path
+2026-11-24T09:16:05.6996164Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-24T09:16:05.7057254Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git.path
+2026-11-24T09:16:05.7063137Z /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7101789Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git.path /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7150016Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git/worktrees/*.path
+2026-11-24T09:16:05.7151947Z /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7210677Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ISIS_-gestion-stages-api/ISIS_-gestion-stages-api/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7269077Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-24T09:16:05.7279161Z /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7328954Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7382582Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-24T09:16:05.7399064Z /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7456339Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config
+2026-11-24T09:16:05.7500379Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-24T09:16:05.7850000Z Removing credentials config '/home/runner/work/_temp/git-credentials-4514804a-d0cc-410a-8863-08acf643b0a7.config'
+2026-11-24T09:16:05.8022273Z Cleaning up orphan processes

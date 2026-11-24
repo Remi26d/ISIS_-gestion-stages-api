@@ -1,5 +1,18 @@
 # Rapport de vérification
 
+## Version 1.3 — 24 novembre 2026
+
+Le code `b449de80dbc63c273cb93603e4cbec92645f859c` ajoute une visite guidée en six étapes. Le déploiement `dep-dc2lbdm0tbcc73852jr0` est **Live** depuis le 24 novembre 2026 à 10:16:43, heure de Paris. La [CI 45363484332](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45363484332) est réussie.
+
+- **23 tests Python** et **7 tests JavaScript** réussis ; couverture Python de **141 instructions et 16 sorties de branche : 100 %**.
+- Ruff, syntaxe JavaScript et PowerShell, construction Docker et scénario HTTP avec `PORT=10000` réussis dans la CI.
+- Accueil, ressources du tutoriel, logo, guide et API contrôlés par HTTP sur l’URL publique. Le stage temporaire a été supprimé.
+- Tour observé dans le navigateur : six étapes, précédent/suivant, fermeture par Échap, reprise de la vue initiale, absence de réapparition au rechargement et relance depuis le bouton **?**.
+- Contrôle à **340 × 234 pixels CSS par zoom** : cartes contenues dans la fenêtre et absence de débordement horizontal du document après correction de l’en-tête. Aucun téléphone physique n’a été utilisé.
+- Swagger public : création fictive **201**, puis suppression **204**. Six exemples fictifs ont ensuite été ajoutés depuis l’interface pour la démonstration.
+
+Les [preuves datées](preuves.md) conservent le reçu, le journal Actions, le contrôle HTTP et les captures. Le rapport final PDF et sa version Word décrivent cette source applicative. Les ajouts de preuves ne changent pas l’image applicative Render.
+
 ## Version 1.2 - 23 novembre 2026
 
 Le commit `c31a9aeee3262532dfec4c9832663735747c2b33` ajoute le logo ISIS original, la palette corail-violet et `/guide`, avec cinq exemples HTTP explicatifs et un PDF de huit pages. La [CI 45181335579](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45181335579) est terminée avec succès.

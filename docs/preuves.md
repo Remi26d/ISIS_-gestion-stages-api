@@ -1,5 +1,18 @@
 # Captures et preuves
 
+## Visite guidée — 24 novembre 2026
+
+La version **1.3.0**, code `b449de80dbc63c273cb93603e4cbec92645f859c`, est déployée sur Render et sa CI est réussie. La visite de six étapes se lance à la première ouverture dans un navigateur ; le bouton **?** la relance.
+
+| Preuve de la version 1.3 | Contenu |
+|---|---|
+| [00-deploiement.json](../preuves/2026-11-24/00-deploiement.json) | Déploiement Live, source, service Free et exécution CI réussie. |
+| [01-controle-public.txt](../preuves/2026-11-24/01-controle-public.txt) | Vérification HTTP des fichiers publics et CRUD avec nettoyage du stage temporaire. |
+| [02-actions.txt](../preuves/2026-11-24/02-actions.txt) | Journal réel du job : 23 tests Python, 7 tests JavaScript, couverture Python, image Docker et contrôle HTTP. |
+| [03-tutoriel-public.jpg](../preuves/2026-11-24/03-tutoriel-public.jpg) | Infobulle Ajouter un stage réellement ouverte sur le site public. |
+| [04-tableau-de-bord-public.jpg](../preuves/2026-11-24/04-tableau-de-bord-public.jpg) | Six exemples fictifs, répartition 2 / 2 / 2 sur le service public. |
+| [05-validation-visuelle.md](../preuves/2026-11-24/05-validation-visuelle.md) | Parcours, clavier, mémorisation, largeur réduite et contexte des contrôles. |
+
 ## Logo ISIS et guide - 23 novembre 2026
 
 Source : `c31a9aeee3262532dfec4c9832663735747c2b33`. Le déploiement Render est **Live**, la CI est réussie et le contrôle public a validé l’API ainsi que les fichiers web. Les captures distinguent la prévisualisation de la version publique.

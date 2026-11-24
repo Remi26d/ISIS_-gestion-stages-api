@@ -1,0 +1,167 @@
+{
+  "observed_date": "2026-11-24",
+  "timezone": "Europe/Paris",
+  "source_commit": "b449de80dbc63c273cb93603e4cbec92645f859c",
+  "version": "1.3.0",
+  "public_url": "https://isis-gestion-stages-api.onrender.com",
+  "render": {
+    "service_id": "srv-dc000o142hec738a2lhg",
+    "runtime": "docker",
+    "plan": "free",
+    "region": "frankfurt",
+    "branch": "main",
+    "auto_deploy": "on_commit",
+    "health_check": "TCP par défaut",
+    "deploy": {
+      "commit": {
+        "createdAt": "2026-11-24T09:15:28Z",
+        "id": "b449de80dbc63c273cb93603e4cbec92645f859c",
+        "message": "Ajouter une visite guidée en six étapes pour la prise en main"
+      },
+      "createdAt": "2026-11-24T09:15:34.887515Z",
+      "finishedAt": "2026-11-24T09:16:43.297423Z",
+      "id": "dep-dc2lbdm0tbcc73852jr0",
+      "startedAt": "2026-11-24T09:15:34.860712Z",
+      "status": "live",
+      "trigger": "new_commit",
+      "updatedAt": "2026-11-24T09:17:11.95654Z"
+    }
+  },
+  "github_actions": {
+    "run_id": 45363484332,
+    "job_id": 138339129516,
+    "conclusion": "success",
+    "url": "https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45363484332",
+    "jobs": [
+      {
+        "id": 138339129516,
+        "name": "verifier",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 45363484332,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Installer les dépendances",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Vérifier le code",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Exécuter les tests et mesurer la couverture",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run actions/setup-node@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Vérifier JavaScript et la logique de l’interface",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Vérifier la syntaxe du script Windows",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Construire l’image",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Vérifier le port Render et les routes dans le conteneur",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Collecter les journaux et supprimer le conteneur",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Post Run actions/setup-node@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22
+          },
+          {
+            "name": "Post Run actions/setup-python@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23
+          },
+          {
+            "name": "Post Run actions/checkout@v6",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 24
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 25
+          }
+        ]
+      }
+    ]
+  },
+  "results": {
+    "python_tests": 23,
+    "javascript_tests": 7,
+    "python_statements": 141,
+    "python_branch_exits": 16,
+    "python_coverage_percent": 100,
+    "docker_build": "success",
+    "docker_http_port": 10000,
+    "public_crud": "201 / 200 / 200 / 200 / 200 / 204 / 404",
+    "swagger_manual": {
+      "create_status": 201,
+      "test_id": 2,
+      "cleanup_status": 204
+    },
+    "public_demo": {
+      "count": 6,
+      "in_progress": 2,
+      "upcoming": 2,
+      "completed": 2,
+      "created_from": "Bouton Essayer avec une démo, confirmation Ajouter les exemples"
+    }
+  },
+  "scope": "Données fictives. Les captures sont originales et les journaux datés. La couverture ne mesure que le code Python."
+}

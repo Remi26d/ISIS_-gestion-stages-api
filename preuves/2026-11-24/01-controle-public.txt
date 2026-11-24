@@ -1,0 +1,27 @@
+2026-11-24T09:18:18.529480+00:00
+Commit b449de80dbc63c273cb93603e4cbec92645f859c
+Version 1.3.0
+Vérification HTTP de https://isis-gestion-stages-api.onrender.com
+GET    /health            HTTP 200
+GET    /                  HTTP 200
+GET    /assets/style.css  HTTP 200
+GET    /assets/app.js     HTTP 200
+GET    /assets/model.mjs  HTTP 200
+GET    /assets/icons.svg  HTTP 200
+GET    /assets/theme.css  HTTP 200
+GET    /assets/isis-logo.jpg HTTP 200
+GET    /guide             HTTP 200
+GET    /assets/guide.js   HTTP 200
+GET    /assets/tour.js    HTTP 200
+GET    /assets/tour.css   HTTP 200
+GET    /assets/guide-soutenance.pdf HTTP 200
+GET    /docs              HTTP 200
+GET    /openapi.json      HTTP 200
+POST   /stages            HTTP 201
+GET    /stages            HTTP 200
+GET    /stages/1          HTTP 200
+PUT    /stages/1          HTTP 200
+GET    /stages/1          HTTP 200
+DELETE /stages/1          HTTP 204
+GET    /stages/1          HTTP 404
+Contrôles HTTP réussis.
