@@ -1,6 +1,6 @@
 # Comprendre et présenter le projet
 
-ISIS Castres · FISA5 · 23 novembre 2026.
+ISIS Castres · FISA5 · Guide révisé le 26 novembre 2026.
 
 Rémi DELARUE, Romane CANO, Alexis DECHENAIS, Yasmine JAOU, Lina KHADLY.
 
@@ -37,7 +37,7 @@ SQLite est imposé et convient au domaine pédagogique. Les modules séparent HT
 
 SQLite conserve les transactions dans son fichier si le même fichier est réutilisé. La durabilité du support est distincte : un conteneur supprimé sans stockage durable ou le disque éphémère Render Free peuvent faire disparaître ce fichier. L’énoncé admet cette limite. Les statuts et indicateurs de l’interface sont calculés à partir des stages réels ; ils n’ajoutent aucun champ métier à l’API.
 
-Le Dockerfile est la recette, l’image le paquet construit et le conteneur son exécution. Le processus tourne avec un utilisateur non privilégié. Uvicorn écoute sur `0.0.0.0`, port 8000 par défaut ou valeur de `PORT` sur Render. Node sert aux tests et à la prévisualisation, pas au démarrage de l’image.
+Le Dockerfile est la recette, l’image le paquet construit et le conteneur son exécution. Le processus tourne avec un utilisateur non privilégié. Uvicorn écoute sur `0.0.0.0`, port 8000 par défaut ou valeur de `PORT` sur Render. Node sert aux tests JavaScript. Le serveur de prévisualisation utilise Python et FastAPI ; le démarrage de l’image ne demande pas Node.
 
 Git versionne ; GitHub héberge et exécute la CI ; Render déploie et expose le service HTTPS. La configuration réelle Render est Docker Free, Francfort, branche main, déploiement au commit **sans attente de CI**. `render.yaml` est un Blueprint alternatif non appliqué. La sonde actuelle Render est TCP ; `/health` est contrôlé séparément par HTTP.
 
@@ -52,20 +52,20 @@ Git versionne ; GitHub héberge et exécute la CI ; Render déploie et expose le
 | Captures Swagger et interface | Comportement interactif, contexte visible | Preuves datées, pas garantie permanente. |
 | Reçu Render et HTTPS | Configuration et fonctionnement public | Service pouvant dormir, disque éphémère. |
 
-100 % de couverture signifie que les instructions et branches mesurées ont été exécutées, pas une absence garantie de bugs. Les validations historiques du 20 novembre et celles de la version 1.2 sont séparées dans les preuves.
+Le 24 novembre, les 23 tests Python et les 7 tests JavaScript ont réussi. Les 141 instructions et 16 sorties de branche Python ont été couvertes à 100 %. Ce taux signifie que les instructions et branches mesurées ont été exécutées, pas une absence garantie de bugs. Les validations historiques du 20 novembre et celles de la version 1.2 sont séparées dans les preuves.
 
 ## Répéter à cinq en 6 min 15
 
-Répartition proposée pour l’oral, sans attribution des contributions passées :
+Le groupe prépare les séquences suivantes. L’ordre des prises de parole peut être choisi lors de la répétition.
 
-| Temps | Personne proposée | Montrer et expliquer |
+| Temps | Séquence | Montrer et expliquer |
 |---|---|---|
-| 0:00–0:45 | Rémi | Besoin, six champs, URL et tableau de bord. |
-| 0:45–2:00 | Romane | Création fictive, POST, 201, id retourné. |
-| 2:00–3:15 | Alexis | GET, PUT complet, erreur 422 dans Swagger. |
-| 3:15–4:30 | Yasmine | DELETE 204, GET 404, SQLite et transaction. |
-| 4:30–5:30 | Lina | Dockerfile, CI, Render et fichier éphémère. |
-| 5:30–6:15 | Ensemble | Livrables, améliorations et limites. |
+| 0:00-0:45 | Introduction | Besoin, six champs, URL et tableau de bord. |
+| 0:45-2:00 | Création | Création fictive, POST, 201, id retourné. |
+| 2:00-3:15 | Consultation et modification | GET, PUT complet, erreur 422 dans Swagger. |
+| 3:15-4:30 | Suppression et stockage | DELETE 204, GET 404, SQLite et transaction. |
+| 4:30-5:30 | Déploiement | Dockerfile, CI, Render et fichier éphémère. |
+| 5:30-6:15 | Conclusion | Livrables, améliorations et limites. |
 
 **Exercice individuel :** chacun crée, lit, remplace, invalide les dates, supprime et constate le 404. Puis il explique les trois fichiers Python sans lire le guide. Ouvrir le service avant l’oral pour le sortir de veille, garder le PDF et les captures en secours, utiliser des données fictives et nettoyer le stage de test.
 
@@ -84,4 +84,4 @@ Répartition proposée pour l’oral, sans attribution des contributions passée
 
 Les cinq livrables sont code GitHub, Dockerfile, URL publique, documentation courte et quelques captures de fonctionnement/déploiement. Le sujet ne prescrit pas trois captures locales particulières. Une capture Render Live reste utile. Vérifier avec l’enseignante l’accès au dépôt privé et consulter la CI du commit remis.
 
-Sources : énoncé original p. 1–2 ; support « Cloud Computing & Microservices » p. 23–29 et 39–40 ; code et preuves du dépôt ; [Render Free](https://render.com/docs/free) et [Render Deploys](https://render.com/docs/deploys), consultés le 23 novembre 2026. Aucun barème n’est inventé et aucune note n’est garantie.
+Sources : énoncé original p. 1-2 ; support « Cloud Computing & Microservices » p. 23-29 et 39-40 ; code et preuves du dépôt ; [Render Free](https://render.com/docs/free) et [Render Deploys](https://render.com/docs/deploys), consultés le 23 novembre 2026.

@@ -1,12 +1,12 @@
 # Contrôle de l’énoncé original
 
-Relecture le 23 novembre 2026 de **miniProjeCloud&Microservices - Énoncé**, 2 pages. Le sujet ne contient pas de barème chiffré. Une conformité technique ne garantit pas une note ; la démonstration et la compréhension du groupe restent essentielles.
+Relecture le 23 novembre 2026 de **miniProjeCloud&Microservices - Énoncé**, 2 pages. Cette lecture sert de référence pour vérifier les livrables du dépôt.
 
 | Demande littérale | Réalisation et preuve |
 |---|---|
 | Six champs de stage et SQLite, p. 1 | `app/schemas.py`, `app/database.py`, tests de validation et de persistance avec réouverture du fichier. |
 | Création, liste, modification, suppression, p. 1 | POST, GET, PUT, DELETE ; tests isolés, parcours HTTP et Swagger. Lecture individuelle en complément. |
-| Swagger **ou** Postman, y compris ressource absente, p. 1–2 | Sept captures authentiques Swagger : création, lecture, liste, remplacement, suppression, 404. Utiliser les deux outils n’est pas exigé. |
+| Swagger **ou** Postman, y compris ressource absente, p. 1-2 | Sept captures authentiques Swagger : création, lecture, liste, remplacement, suppression, 404. Utiliser les deux outils n’est pas exigé. |
 | Dockerfile, image construite, conteneur exécuté, API vérifiée, Swagger ouvert, p. 2 | Dockerfile, journal Docker local du 20 novembre, CI de l’image, Swagger du conteneur Render. Une capture du Swagger local renforcerait la preuve du contexte local. |
 | GitHub et Web Service Docker Render Free, URL publique testée, p. 2 | Dépôt publié, service Free Docker Francfort, historique Live, sonde et CRUD HTTPS. L’accès de l’enseignante au dépôt privé doit être vérifié avec elle. |
 | Courte documentation des endpoints, p. 2 | Tableau et exemples du README, Swagger et contrat OpenAPI. |
@@ -29,4 +29,4 @@ Le projet est un service unique, organisé en modules. L’énoncé n’impose n
 
 La configuration réelle Render déploie au commit sans attendre la CI ; `render.yaml` est une recette Blueprint alternative, non appliquée au service existant. Les preuves de versions antérieures gardent leur date et leur commit.
 
-Le groupe de cinq est confirmé. Le guide propose une répartition orale ; il ne prétend pas décrire les contributions passées. Chaque membre doit pouvoir rejouer le CRUD et expliquer les choix.
+Le groupe de cinq est confirmé. Le guide organise une démonstration collective en plusieurs séquences. Chaque membre doit pouvoir rejouer le CRUD et expliquer les choix.

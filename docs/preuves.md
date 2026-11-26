@@ -1,6 +1,6 @@
 # Captures et preuves
 
-## Visite guidée — 24 novembre 2026
+## Visite guidée : 24 novembre 2026
 
 La version **1.3.0**, code `b449de80dbc63c273cb93603e4cbec92645f859c`, est déployée sur Render et sa CI est réussie. La visite de six étapes se lance à la première ouverture dans un navigateur ; le bouton **?** la relance.
 

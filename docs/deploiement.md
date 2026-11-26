@@ -1,10 +1,10 @@
 # Docker et déploiement Render
 
-## Service déjà déployé le 20 novembre 2026
+## Service existant
 
 [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde HTTP](https://isis-gestion-stages-api.onrender.com/health) · [Tableau de bord du service](https://dashboard.render.com/web/srv-dc000o142hec738a2lhg).
 
-Le service `isis-gestion-stages-api` utilise le dépôt `Remi26d/ISIS_-gestion-stages-api`, la branche `main`, le runtime Docker, le plan **Free** et la région **Frankfurt**. Le déploiement `dep-dc000op42hec738a2n10` du commit `ed8258ebeff0e89967831a40cf612dff315567c0` est passé à `live` le 20 novembre 2026 à **09:11, heure de Paris**. Le contrôle HTTP et le parcours interactif Swagger ont réussi. Le [reçu de déploiement](../preuves/render/00-deploiement.json) et les [journaux](../preuves/render/07-journaux-render.txt) conservent les paramètres et les événements constatés.
+Le service `isis-gestion-stages-api` utilise le dépôt `Remi26d/ISIS_-gestion-stages-api`, la branche `main`, le runtime Docker, le plan **Free** et la région **Frankfurt**. La version applicative 1.3.0 a été déployée le 24 novembre 2026. Le [reçu correspondant](../preuves/2026-11-24/00-deploiement.json) et le [contrôle HTTP public](../preuves/2026-11-24/01-controle-public.txt) documentent ce déploiement. Les essais plus anciens restent consultables dans le [rapport de vérification](verification.md).
 
 Ce service a été créé directement dans Render. Son déploiement automatique se déclenche **à chaque commit**, et sa vérification de démarrage est le contrôle **TCP par défaut**. La route `/health` a été vérifiée séparément par HTTP. Le fichier `render.yaml` décrit une autre méthode de création avec Blueprint ; ses réglages `/health`, attente de la CI et filtres de fichiers ne sont pas appliqués automatiquement au service créé directement.
 
@@ -45,7 +45,9 @@ docker rm gestion-stages
 
 L’image démarre avec l’utilisateur `10001:10001`. Le dossier `/app/data` lui appartient et la base est créée à l’emplacement `/app/data/stages.sqlite3`. La copie comprend le code applicatif et les dépendances d’exécution verrouillées. Le port interne par défaut est `8000`. Pour reproduire le port Render dans Docker, utiliser `--env PORT=10000 --publish 127.0.0.1:8000:10000` dans la commande `docker run`. [Référence Dockerfile](https://docs.docker.com/reference/dockerfile/)
 
-## 2. Publier le dépôt sur GitHub
+## 2. Publier un nouveau dépôt sur GitHub
+
+Cette procédure concerne une nouvelle installation. Pour le dépôt existant, récupérer les changements avec `git pull` ou GitHub Desktop suffit ; ne pas recréer le dépôt.
 
 1. Créer un dépôt vide dans l’espace GitHub utilisé par le groupe, sans initialisation distante. Choisir une visibilité qui donne accès au code à l’enseignante au moment de la remise.
 2. Depuis le dossier du projet, préparer le premier commit. Relire la liste des fichiers avant de valider.

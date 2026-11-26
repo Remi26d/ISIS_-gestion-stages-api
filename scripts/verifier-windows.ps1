@@ -111,17 +111,8 @@ try {
     Invoke-Docker -Arguments @('exec', $conteneur, 'python', '/tmp/verifier_service.py', $cible)
 
     if ($modeRender) {
-        $readme = Join-Path $racine 'README.md'
-        $markdown = [System.IO.File]::ReadAllText($readme)
-        $ligneGitHub = '(?m)^\*\*Dépôt GitHub\*\* · [^\r\n]+'
-        $ligneRender = '(?m)^\*\*URL publique Render\*\* · [^\r\n]+'
-        if ($markdown -notmatch $ligneGitHub -or $markdown -notmatch $ligneRender) {
-            throw 'Les lignes des adresses du projet sont introuvables dans le README.'
-        }
-        $markdown = $markdown -replace $ligneGitHub, "**Dépôt GitHub** · [$adresseGitHub]($adresseGitHub)"
-        $markdown = $markdown -replace $ligneRender, "**URL publique Render** · [$adresse]($adresse)"
-        [System.IO.File]::WriteAllText($readme, $markdown, [System.Text.UTF8Encoding]::new($false))
-        Ecrire-Journal 'Les adresses GitHub et Render sont renseignées dans le README.'
+        Ecrire-Journal "Dépôt associé : $adresseGitHub"
+        Ecrire-Journal "Service vérifié : $adresse"
     }
     Ecrire-Journal 'Validation terminée.'
 } catch {

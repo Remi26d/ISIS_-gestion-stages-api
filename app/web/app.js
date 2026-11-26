@@ -86,7 +86,7 @@ async function loadStages() {
 function render() {
   $("#errorBanner").hidden = !state.error;
   $("#errorMessage").textContent = state.error + (state.ready ? " Les dernières données reçues restent affichées." : "");
-  $("#navCount").textContent = state.ready ? state.stages.length : "—";
+  $("#navCount").textContent = state.ready ? state.stages.length : "...";
   $("#exportButton").disabled = !state.ready || !state.stages.length;
   const companies = [...new Set(state.stages.map((stage) => stage.entreprise_accueil))].sort((a, b) => a.localeCompare(b, "fr"));
   if (state.company !== "all" && !companies.includes(state.company)) state.company = "all";
@@ -108,12 +108,12 @@ function renderDashboard() {
     ["upcoming", "À venir", "clock", "Les prochains départs"],
     ["completed", "Terminés", "check", "Des expériences accomplies"],
   ];
-  $("#metrics").innerHTML = metrics.map(([key, title, name, note]) => `<button class="metric-card" data-action="status" data-status="${key}" aria-label="Voir les stages : ${title}"><div class="metric-top"><span>${title}</span><span class="metric-icon ${key}">${icon(name)}</span></div><div class="metric-number">${state.ready ? counts[key] : "—"}</div><div class="metric-note">${note}</div></button>`).join("");
-  $("#ringTotal").textContent = state.ready ? counts.all : "—";
+  $("#metrics").innerHTML = metrics.map(([key, title, name, note]) => `<button class="metric-card" data-action="status" data-status="${key}" aria-label="Voir les stages : ${title}"><div class="metric-top"><span>${title}</span><span class="metric-icon ${key}">${icon(name)}</span></div><div class="metric-number">${state.ready ? counts[key] : "..."}</div><div class="metric-note">${note}</div></button>`).join("");
+  $("#ringTotal").textContent = state.ready ? counts.all : "...";
   const active = counts.all ? counts.active / counts.all * 100 : 0;
   const upcoming = counts.all ? (counts.active + counts.upcoming) / counts.all * 100 : 0;
   $("#statusRing").style.background = counts.all ? `conic-gradient(#bfa0f0 0 ${active}%,#f49b94 ${active}% ${upcoming}%,#bdb7cc ${upcoming}% 100%)` : "#524365";
-  $("#statusLegend").innerHTML = ["active", "upcoming", "completed"].map((key) => `<div class="legend-row"><span class="legend-marker ${key}"></span><span>${key === "completed" ? "Terminés" : STATUS[key].label}</span><strong>${state.ready ? counts[key] : "—"}</strong></div>`).join("");
+  $("#statusLegend").innerHTML = ["active", "upcoming", "completed"].map((key) => `<div class="legend-row"><span class="legend-marker ${key}"></span><span>${key === "completed" ? "Terminés" : STATUS[key].label}</span><strong>${state.ready ? counts[key] : "..."}</strong></div>`).join("");
   if (!state.ready) { $("#overviewTable").innerHTML = waitingState(); $("#upcomingList").innerHTML = waitingState(); return; }
   const order = { active: 0, upcoming: 1, completed: 2 };
   const stages = [...state.stages].sort((a, b) => order[stageStatus(a)] - order[stageStatus(b)] || a.date_debut.localeCompare(b.date_debut)).slice(0, 5);
@@ -139,7 +139,7 @@ function renderStages() {
   $("#resultsCount").textContent = state.ready ? `${filtered.length} stage${filtered.length > 1 ? "s" : ""}${hasFilters ? ` sur ${state.stages.length}` : " au total"}` : "En attente de connexion";
   $("#stagesTable").innerHTML = !state.ready ? waitingState() : filtered.length ? stageTable(filtered.slice(start, start + pageSize)) : hasFilters ? emptyState("Aucun stage ne correspond", "Essayez un autre nom, une autre entreprise ou un autre filtre.", "reset") : emptyState("Tout commence par un premier stage", "Les parcours que vous ajoutez seront visibles ici et dans le calendrier.");
   $("#pagination").hidden = !filtered.length;
-  $("#pagination").innerHTML = `<span>${start + 1}–${Math.min(start + pageSize, filtered.length)} sur ${filtered.length} stage${filtered.length > 1 ? "s" : ""}</span><div class="pagination-controls"><button class="icon-button previous" data-action="previous-page" aria-label="Page précédente"${state.page === 1 ? " disabled" : ""}>${icon("chevron")}</button><span class="page-number">${state.page} / ${pages}</span><button class="icon-button" data-action="next-page" aria-label="Page suivante"${state.page === pages ? " disabled" : ""}>${icon("chevron")}</button></div>`;
+  $("#pagination").innerHTML = `<span>${start + 1}-${Math.min(start + pageSize, filtered.length)} sur ${filtered.length} stage${filtered.length > 1 ? "s" : ""}</span><div class="pagination-controls"><button class="icon-button previous" data-action="previous-page" aria-label="Page précédente"${state.page === 1 ? " disabled" : ""}>${icon("chevron")}</button><span class="page-number">${state.page} / ${pages}</span><button class="icon-button" data-action="next-page" aria-label="Page suivante"${state.page === pages ? " disabled" : ""}>${icon("chevron")}</button></div>`;
 }
 
 function renderCalendar() {

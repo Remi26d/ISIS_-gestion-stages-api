@@ -6,7 +6,7 @@
 
 Le bouton **?**, dans la barre supérieure, relance la visite. La fermeture est mémorisée dans le stockage local du navigateur. Aucune donnée de stage n’est créée ou modifiée par le tutoriel. La vue et la position précédentes sont restaurées à la fermeture.
 
-[Ouvrir l’application](https://isis-gestion-stages-api.onrender.com/) · [Swagger technique](https://isis-gestion-stages-api.onrender.com/docs)
+[Accéder à l’application](https://isis-gestion-stages-api.onrender.com/) · [Swagger technique](https://isis-gestion-stages-api.onrender.com/docs)
 
 Le logo ISIS fourni est conservé dans `app/web/isis-logo.jpg` ; les couleurs corail `#F46964` et violet `#804FDF` ont été relevées dans ce visuel. La couleur des boutons est assombrie pour préserver la lisibilité du texte blanc. `theme.css` rassemble les adaptations visuelles.
 

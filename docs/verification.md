@@ -1,6 +1,6 @@
 # Rapport de vérification
 
-## Version 1.3 — 24 novembre 2026
+## Version 1.3 : 24 novembre 2026
 
 Le code `b449de80dbc63c273cb93603e4cbec92645f859c` ajoute une visite guidée en six étapes. Le déploiement `dep-dc2lbdm0tbcc73852jr0` est **Live** depuis le 24 novembre 2026 à 10:16:43, heure de Paris. La [CI 45363484332](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45363484332) est réussie.
 
@@ -11,7 +11,7 @@ Le code `b449de80dbc63c273cb93603e4cbec92645f859c` ajoute une visite guidée en 
 - Contrôle à **340 × 234 pixels CSS par zoom** : cartes contenues dans la fenêtre et absence de débordement horizontal du document après correction de l’en-tête. Aucun téléphone physique n’a été utilisé.
 - Swagger public : création fictive **201**, puis suppression **204**. Six exemples fictifs ont ensuite été ajoutés depuis l’interface pour la démonstration.
 
-Les [preuves datées](preuves.md) conservent le reçu, le journal Actions, le contrôle HTTP et les captures. Le rapport final PDF et sa version Word décrivent cette source applicative. Les ajouts de preuves ne changent pas l’image applicative Render.
+Les [preuves datées](preuves.md) conservent le reçu, le journal Actions, le contrôle HTTP et les captures.  Les ajouts de preuves ne changent pas l’image applicative Render.
 
 ## Version 1.2 - 23 novembre 2026
 
@@ -35,9 +35,9 @@ Le navigateur public affiche le logo ISIS et six exemples ajoutés explicitement
 
 ## Historique du 20 novembre 2026
 
-Python 3.12.14. Les nombres et commits ci-dessous décrivent les versions historiques, pas les résultats de la version 1.2.
+Python 3.12.14. Les nombres et commits ci-dessous décrivent les versions historiques, pas les résultats de la version 1.3 décrite en tête du document.
 
-Le service [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) fonctionne sur Render Docker **Free**, en région Francfort. Le déploiement applicatif `ed8258ebeff0e89967831a40cf612dff315567c0` est `live`. Le contrôle HTTP complet et les opérations interactives dans Swagger ont réussi. Les résultats et captures sont détaillés plus bas.
+Le 20 novembre, le service [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) fonctionnait sur Render Docker **Free**, en région Francfort. Le déploiement applicatif `ed8258ebeff0e89967831a40cf612dff315567c0` était `live`. Le contrôle HTTP complet et les opérations interactives dans Swagger ont réussi. Les résultats et captures sont détaillés plus bas.
 
 ## Résultats locaux
 
@@ -54,9 +54,11 @@ Les tests sont compatibles avec `pytest` et ont été exécutés ici avec `unitt
 
 La commande de lancement du `Dockerfile` a également été exécutée comme processus hôte avec un `PORT` différent de `8000`. Elle a démarré Uvicorn, créé une base temporaire et servi les appels HTTP vérifiés.
 
-## Contrôles en attente
+## Captures complémentaires sur le PC Windows
 
-| Contrôle | État | Vérification à réaliser |
+Ces captures documenteraient plus précisément le contexte local. Elles complètent les preuves déjà jointes ; leur liste n’est pas imposée par l’énoncé.
+
+| Contrôle | État | Complément proposé |
 |---|---|---|
 | Capture Swagger dans le conteneur local | Le journal Docker confirme `/docs`, `/openapi.json` et le CRUD en HTTP ; Swagger a aussi été testé dans le conteneur public Render. | Joindre la capture de Swagger ouvert sur `http://127.0.0.1:8000/docs` depuis le PC. |
 | Captures du terminal Docker et du tableau de bord Render | Les journaux Docker et Render sont joints ; les captures publiques sont réalisées. | Joindre les deux vues depuis les applications connectées du PC, selon le [guide Windows](guide-windows.md). |

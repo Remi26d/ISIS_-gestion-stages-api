@@ -1,4 +1,4 @@
-# Vérification de la visite guidée — 24 novembre 2026
+# Vérification de la visite guidée : 24 novembre 2026
 
 Source applicative : `b449de80dbc63c273cb93603e4cbec92645f859c`, version 1.3.0.
 
@@ -22,6 +22,8 @@ Après ces essais, les six exemples ont été ajoutés depuis l’interface publ
 
 Le reçu JSON et les journaux documentent le déploiement et les contrôles automatisés. La base Render Free reste éphémère ; ces résultats sont ceux du 24 novembre 2026.
 
-## Rapport final
+## Rapport disponible le 24 novembre
+
+Cette observation concerne l’édition disponible à cette date.
 
 Le rapport est fourni séparément en PDF et DOCX. Les dix pages ont été rendues et inspectées. Les liens externes et le renvoi au JSON de la page 4 ont été contrôlés. Il reprend les résultats du code applicatif ci-dessus et distingue les limites de la démonstration des possibilités futures.
