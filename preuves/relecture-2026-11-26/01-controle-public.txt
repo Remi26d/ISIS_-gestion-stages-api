@@ -1,0 +1,31 @@
+Contrôle réel UTC 2026-11-26T13:40:17.511102+00:00
+Source attendue 37611ed6c1ab86b1d2aa7aea53b927f0a6a6a2a8
+Vérification HTTP de https://isis-gestion-stages-api.onrender.com
+GET    /health            HTTP 200
+GET    /                  HTTP 200
+GET    /assets/style.css  HTTP 200
+GET    /assets/app.js     HTTP 200
+GET    /assets/model.mjs  HTTP 200
+GET    /assets/icons.svg  HTTP 200
+GET    /assets/theme.css  HTTP 200
+GET    /assets/isis-logo.jpg HTTP 200
+GET    /guide             HTTP 200
+GET    /assets/guide.js   HTTP 200
+GET    /assets/tour.js    HTTP 200
+GET    /assets/tour.css   HTTP 200
+GET    /assets/guide-soutenance.pdf HTTP 200
+GET    /docs              HTTP 200
+GET    /openapi.json      HTTP 200
+POST   /stages            HTTP 201
+GET    /stages            HTTP 200
+GET    /stages/1          HTTP 200
+PUT    /stages/1          HTTP 200
+GET    /stages/1          HTTP 200
+DELETE /stages/1          HTTP 204
+GET    /stages/1          HTTP 404
+Contrôles HTTP réussis.
+Fichier public identique index.html SHA256 4055af84cdaeb96e21a949ac85d904535c290b3e03089deb240e2e56831fd249
+Fichier public identique guide.html SHA256 0498d562571e8eb8f19f3feaf926535c1bed1bdc042df8e157c5fc4af35d439b
+Fichier public identique app.js SHA256 64bb74f790f16d15ba1a0799cf47497243b6a30da5a309dcff1afa9fadf23249
+Fichier public identique guide-soutenance.pdf SHA256 855ded6d7ee7c521348cd81ebbf0c7b6725f1df27e8b27049a946c6be89ca631
+Contrôle terminé. Stage temporaire supprimé.

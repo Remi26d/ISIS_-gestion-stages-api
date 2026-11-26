@@ -1,0 +1,34 @@
+{
+  "controle": "Relecture documentaire du 26 novembre 2026",
+  "application_version": "1.3.0",
+  "repository": "https://github.com/Remi26d/ISIS_-gestion-stages-api",
+  "repository_visibility": "public",
+  "source_commit": "37611ed6c1ab86b1d2aa7aea53b927f0a6a6a2a8",
+  "service_id": "srv-dc000o142hec738a2lhg",
+  "url": "https://isis-gestion-stages-api.onrender.com",
+  "runtime": "docker",
+  "plan": "free",
+  "region": "frankfurt",
+  "deployment": {
+    "commit": {
+      "createdAt": "2026-11-26T13:39:34Z",
+      "id": "37611ed6c1ab86b1d2aa7aea53b927f0a6a6a2a8",
+      "message": "Actualiser les guides pour le dépôt désormais public"
+    },
+    "createdAt": "2026-11-26T13:39:42.629018Z",
+    "finishedAt": "2026-11-26T13:40:07.123638Z",
+    "id": "dep-dc43d7l9el5s73avj4r0",
+    "startedAt": "2026-11-26T13:39:42.60202Z",
+    "status": "live",
+    "trigger": "new_commit",
+    "updatedAt": "2026-11-26T13:40:40.742222Z"
+  },
+  "ci": {
+    "run_id": 45831312242,
+    "url": "https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45831312242",
+    "head_sha": "37611ed6c1ab86b1d2aa7aea53b927f0a6a6a2a8",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "portee": "Révision des textes, du guide PDF et de la vérification Windows. Contrat CRUD inchangé."
+}

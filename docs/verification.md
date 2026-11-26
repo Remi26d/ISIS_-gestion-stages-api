@@ -1,5 +1,15 @@
 # Rapport de vérification
 
+## Relecture et vérification du 26 novembre 2026
+
+Les guides ont été relus pour préciser les procédures Windows, distinguer les résultats historiques des résultats actuels et harmoniser la présentation collective du projet. Les tirets longs ont été retirés des textes rédigés, du site et de son guide PDF. Le journal brut de couverture du 20 novembre conserve sa ponctuation d’origine.
+
+La vérification publique du script Windows ne tente plus de réécrire d’anciennes lignes du README. Le dépôt est désormais public, ce qui permet de consulter le code sans invitation.
+
+La [CI de cette révision](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45831312242) a réussi les tests Python et JavaScript, Ruff, les contrôles de syntaxe, la construction de l’image et le parcours HTTP dans le conteneur. Les 23 tests Python couvrent les 141 instructions et les 16 sorties de branche mesurées à 100 %. Les 7 tests JavaScript passent également. Les huit pages du guide PDF ont été rendues et inspectées ; les liens et la pagination ont été vérifiés.
+
+Les résultats du contrôle public sont conservés dans les [preuves du 26 novembre](../preuves/relecture-2026-11-26/01-controle-public.txt). Les sections suivantes présentent les vérifications antérieures, avec leur date et leur version.
+
 ## Version 1.3 : 24 novembre 2026
 
 Le code `b449de80dbc63c273cb93603e4cbec92645f859c` ajoute une visite guidée en six étapes. Le déploiement `dep-dc2lbdm0tbcc73852jr0` est **Live** depuis le 24 novembre 2026 à 10:16:43, heure de Paris. La [CI 45363484332](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45363484332) est réussie.

@@ -4,7 +4,7 @@
 
 [Swagger public](https://isis-gestion-stages-api.onrender.com/docs) · [Sonde HTTP](https://isis-gestion-stages-api.onrender.com/health) · [Tableau de bord du service](https://dashboard.render.com/web/srv-dc000o142hec738a2lhg).
 
-Le service `isis-gestion-stages-api` utilise le dépôt `Remi26d/ISIS_-gestion-stages-api`, la branche `main`, le runtime Docker, le plan **Free** et la région **Frankfurt**. La version applicative 1.3.0 a été déployée le 24 novembre 2026. Le [reçu correspondant](../preuves/2026-11-24/00-deploiement.json) et le [contrôle HTTP public](../preuves/2026-11-24/01-controle-public.txt) documentent ce déploiement. Les essais plus anciens restent consultables dans le [rapport de vérification](verification.md).
+Le service `isis-gestion-stages-api` utilise le dépôt `Remi26d/ISIS_-gestion-stages-api`, la branche `main`, le runtime Docker, le plan **Free** et la région **Frankfurt**. La version applicative 1.3.0 a reçu une mise à jour des textes et du guide PDF le 26 novembre 2026. Le [reçu correspondant](../preuves/relecture-2026-11-26/00-deploiement.json) et le [contrôle HTTP public](../preuves/relecture-2026-11-26/01-controle-public.txt) documentent cette mise en ligne. Les essais plus anciens restent consultables dans le [rapport de vérification](verification.md).
 
 Ce service a été créé directement dans Render. Son déploiement automatique se déclenche **à chaque commit**, et sa vérification de démarrage est le contrôle **TCP par défaut**. La route `/health` a été vérifiée séparément par HTTP. Le fichier `render.yaml` décrit une autre méthode de création avec Blueprint ; ses réglages `/health`, attente de la CI et filtres de fichiers ne sont pas appliqués automatiquement au service créé directement.
 

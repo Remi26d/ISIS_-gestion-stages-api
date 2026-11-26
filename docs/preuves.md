@@ -1,5 +1,16 @@
 # Captures et preuves
 
+## Relecture documentaire du 26 novembre 2026
+
+Cette révision actualise les guides et leur PDF, les textes de l’interface et la procédure Windows. Elle conserve le contrat de l’API et les captures antérieures. Le dépôt est public depuis le 26 novembre.
+
+- [CI de la version déployée](https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45831312242) : contrôles réussis, dont les tests et le parcours HTTP Docker.
+- [Extraits du journal Actions](../preuves/relecture-2026-11-26/02-actions.txt) : résultats réels des tests, couverture Python et contrôle du conteneur.
+- [Contrôle HTTP public](../preuves/relecture-2026-11-26/01-controle-public.txt) : parcours CRUD et comparaison des fichiers servis avec ceux du dépôt.
+- [Reçu de déploiement](../preuves/relecture-2026-11-26/00-deploiement.json) : version, service, état Live et exécution CI associés.
+
+Les captures ci-dessous restent celles des dates indiquées. Elles ne sont pas remplacées par des images reconstituées.
+
 ## Visite guidée : 24 novembre 2026
 
 La version **1.3.0**, code `b449de80dbc63c273cb93603e4cbec92645f859c`, est déployée sur Render et sa CI est réussie. La visite de six étapes se lance à la première ouverture dans un navigateur ; le bouton **?** la relance.

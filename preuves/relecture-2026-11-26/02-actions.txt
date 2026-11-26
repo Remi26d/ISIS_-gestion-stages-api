@@ -1,0 +1,32 @@
+Extraits du journal réel GitHub Actions
+Exécution : https://github.com/Remi26d/ISIS_-gestion-stages-api/actions/runs/45831312242
+Source : 37611ed6c1ab86b1d2aa7aea53b927f0a6a6a2a8
+
+2026-11-26T13:39:55.6861863Z All checks passed!
+2026-11-26T13:39:58.4194196Z TOTAL               141      0     16      0  100.0%
+2026-11-26T13:39:58.4195070Z ======================== 23 passed, 1 warning in 1.21s =========================
+2026-11-26T13:39:59.1789151Z ℹ tests 7
+2026-11-26T13:39:59.1789744Z ℹ pass 7
+2026-11-26T13:40:24.0154597Z {"status":"ok"}Vérification HTTP de http://127.0.0.1:8000
+2026-11-26T13:40:24.0155040Z GET    /health            HTTP 200
+2026-11-26T13:40:24.0155302Z GET    /                  HTTP 200
+2026-11-26T13:40:24.0155549Z GET    /assets/style.css  HTTP 200
+2026-11-26T13:40:24.0155801Z GET    /assets/app.js     HTTP 200
+2026-11-26T13:40:24.0156044Z GET    /assets/model.mjs  HTTP 200
+2026-11-26T13:40:24.0156282Z GET    /assets/icons.svg  HTTP 200
+2026-11-26T13:40:24.0156509Z GET    /assets/theme.css  HTTP 200
+2026-11-26T13:40:24.0156775Z GET    /assets/isis-logo.jpg HTTP 200
+2026-11-26T13:40:24.0157027Z GET    /guide             HTTP 200
+2026-11-26T13:40:24.0157261Z GET    /assets/guide.js   HTTP 200
+2026-11-26T13:40:24.0157497Z GET    /assets/tour.js    HTTP 200
+2026-11-26T13:40:24.0157736Z GET    /assets/tour.css   HTTP 200
+2026-11-26T13:40:24.0158001Z GET    /assets/guide-soutenance.pdf HTTP 200
+2026-11-26T13:40:24.0158275Z GET    /docs              HTTP 200
+2026-11-26T13:40:24.0158511Z GET    /openapi.json      HTTP 200
+2026-11-26T13:40:24.0158754Z POST   /stages            HTTP 201
+2026-11-26T13:40:24.0158989Z GET    /stages            HTTP 200
+2026-11-26T13:40:24.0159212Z GET    /stages/1          HTTP 200
+2026-11-26T13:40:24.0159441Z PUT    /stages/1          HTTP 200
+2026-11-26T13:40:24.0159667Z GET    /stages/1          HTTP 200
+2026-11-26T13:40:24.0159904Z DELETE /stages/1          HTTP 204
+2026-11-26T13:40:24.0160138Z GET    /stages/1          HTTP 404
