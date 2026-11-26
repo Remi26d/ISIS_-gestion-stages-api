@@ -33,7 +33,7 @@ Les cinq livrables demandés sont accessibles depuis les emplacements suivants.
 | Courte documentation des endpoints | [Table des routes et exemple JSON](#endpoints), ci-dessous. |
 | Captures de fonctionnement et de déploiement | [Index des captures et journaux](docs/preuves.md), avec des essais sur l’URL publique Render. |
 
-Le rapport final PDF accompagne la remise et présente la démarche collective ainsi que les difficultés rencontrées. Le dépôt étant privé, l’enseignante doit disposer d’un accès pour consulter le code et les journaux GitHub Actions.
+Le rapport final PDF accompagne la remise et présente la démarche collective ainsi que les difficultés rencontrées. Le dépôt est public et permet de consulter le code ainsi que les journaux GitHub Actions.
 
 ## Fonctionnement de la plateforme
 
@@ -112,7 +112,7 @@ git clone https://github.com/Remi26d/ISIS_-gestion-stages-api.git
 cd ISIS_-gestion-stages-api
 ```
 
-L’accès GitHub au dépôt privé est nécessaire pour le cloner. Deux modes de lancement sont possibles.
+Le dépôt public peut être cloné sans autorisation particulière. Deux modes de lancement sont possibles.
 
 ### Avec Docker
 

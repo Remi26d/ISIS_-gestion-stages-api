@@ -74,7 +74,7 @@ Il n’est pas nécessaire de créer un nouveau Blueprint. La [procédure de dé
 
 Dans GitHub Desktop, relire les fichiers affichés dans **Changes**. Pour un ajout de documentation, de captures ou de journaux uniquement, saisir `[skip render] Compléter les preuves de vérification` dans **Summary**, puis choisir **Commit to main → Push origin**. Ce préfixe conserve l’image applicative en cours sur Render.
 
-Consulter ensuite l’onglet **Actions** du dépôt et vérifier le résultat du commit publié. Avant la remise, confirmer avec l’enseignante qu’elle peut consulter le dépôt privé. La liste des preuves déjà présentes se trouve dans [preuves.md](preuves.md).
+Consulter ensuite l’onglet **Actions** du dépôt et vérifier le résultat du commit publié. Le dépôt est public ; aucune invitation n’est nécessaire pour le consulter. La liste des preuves déjà présentes se trouve dans [preuves.md](preuves.md).
 
 ## Résoudre un problème d’accès à GitHub
 

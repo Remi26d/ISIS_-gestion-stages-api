@@ -8,7 +8,7 @@ Relecture le 23 novembre 2026 de **miniProjeCloud&Microservices - Énoncé**, 2 
 | Création, liste, modification, suppression, p. 1 | POST, GET, PUT, DELETE ; tests isolés, parcours HTTP et Swagger. Lecture individuelle en complément. |
 | Swagger **ou** Postman, y compris ressource absente, p. 1-2 | Sept captures authentiques Swagger : création, lecture, liste, remplacement, suppression, 404. Utiliser les deux outils n’est pas exigé. |
 | Dockerfile, image construite, conteneur exécuté, API vérifiée, Swagger ouvert, p. 2 | Dockerfile, journal Docker local du 20 novembre, CI de l’image, Swagger du conteneur Render. Une capture du Swagger local renforcerait la preuve du contexte local. |
-| GitHub et Web Service Docker Render Free, URL publique testée, p. 2 | Dépôt publié, service Free Docker Francfort, historique Live, sonde et CRUD HTTPS. L’accès de l’enseignante au dépôt privé doit être vérifié avec elle. |
+| GitHub et Web Service Docker Render Free, URL publique testée, p. 2 | Dépôt publié, service Free Docker Francfort, historique Live, sonde et CRUD HTTPS. Le dépôt est public depuis le 26 novembre et peut être consulté sans invitation. |
 | Courte documentation des endpoints, p. 2 | Tableau et exemples du README, Swagger et contrat OpenAPI. |
 | Quelques captures de fonctionnement et de déploiement, p. 2 | Captures réelles sur l’URL Render et journaux, indexées dans `docs/preuves.md`. Le sujet ne fixe ni nombre exact ni trois écrans locaux obligatoires. Une capture de l’événement Render Live est un complément utile. |
 | Pas de vraies données personnelles ; limite SQLite/Free, remarque p. 2 | Données fictives et avertissement dans l’interface, guides expliquant la perte du fichier éphémère. |

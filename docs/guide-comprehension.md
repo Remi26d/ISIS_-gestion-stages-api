@@ -82,6 +82,6 @@ Le groupe prépare les séquences suivantes. L’ordre des prises de parole peut
 
 ## Remise et sources
 
-Les cinq livrables sont code GitHub, Dockerfile, URL publique, documentation courte et quelques captures de fonctionnement/déploiement. Le sujet ne prescrit pas trois captures locales particulières. Une capture Render Live reste utile. Vérifier avec l’enseignante l’accès au dépôt privé et consulter la CI du commit remis.
+Les cinq livrables sont code GitHub, Dockerfile, URL publique, documentation courte et quelques captures de fonctionnement/déploiement. Le sujet ne prescrit pas trois captures locales particulières. Une capture Render Live reste utile. Le dépôt est public. Avant la remise, consulter la CI du commit transmis.
 
 Sources : énoncé original p. 1-2 ; support « Cloud Computing & Microservices » p. 23-29 et 39-40 ; code et preuves du dépôt ; [Render Free](https://render.com/docs/free) et [Render Deploys](https://render.com/docs/deploys), consultés le 23 novembre 2026.
