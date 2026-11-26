@@ -2,7 +2,7 @@
 
 <img src="app/web/isis-logo.jpg" alt="Logo ISIS Castres" width="80">
 
-**Mini-projet Cloud Computing, Microservices et API — ISIS Castres, FISA5, 2026-2027**  
+**Mini-projet Cloud Computing, Microservices et API : ISIS Castres, FISA5, 2026-2027**  
 **Enseignante :** Emna Trigui  
 **Groupe :** Rémi DELARUE, Romane CANO, Alexis DECHENAIS, Yasmine JAOU et Lina KHADLY.
 
@@ -12,10 +12,10 @@ Ce dépôt rassemble le code source, les commandes de lancement, la documentatio
 
 ## Accéder à la solution
 
-- **[Application web](https://isis-gestion-stages-api.onrender.com/)** — gestion des stages, calendrier et visite guidée.
-- **[Swagger](https://isis-gestion-stages-api.onrender.com/docs)** — documentation et essais interactifs de l’API.
-- **[Contrat OpenAPI](https://isis-gestion-stages-api.onrender.com/openapi.json)** — description des routes et des schémas au format JSON.
-- **[Guide de compréhension](https://isis-gestion-stages-api.onrender.com/guide)** — explication du fonctionnement de la plateforme.
+- **[Application web](https://isis-gestion-stages-api.onrender.com/)** : gestion des stages, calendrier et visite guidée.
+- **[Swagger](https://isis-gestion-stages-api.onrender.com/docs)** : documentation et essais interactifs de l’API.
+- **[Contrat OpenAPI](https://isis-gestion-stages-api.onrender.com/openapi.json)** : description des routes et des schémas au format JSON.
+- **[Guide de compréhension](https://isis-gestion-stages-api.onrender.com/guide)** : explication du fonctionnement de la plateforme.
 
 Le service gratuit peut être mis en veille. Le premier accès peut donc nécessiter un temps de réveil. Les données sont partagées entre les visiteurs et peuvent disparaître lors d’une mise en veille, d’un redémarrage ou d’un redéploiement.
 
